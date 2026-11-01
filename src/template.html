@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TrueEarnings</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
+<style>
+/* Layout idea: an analyst's workpaper. Summary strip, then findings beside the earnings bridge, then the proof (benchmark), then the raw ledger. */
+:root{
+  --paper:#f4f6f5; --sheet:#ffffff; --ink:#15212b; --muted:#5b6872; --rule:#d9e0e3;
+  --accent:#1d5b86; --accent-soft:#e3eef6;
+  --up:#25764a; --up-soft:#e2f2e8; --down:#b0422f; --down-soft:#f8e6e2; --warn:#a86a00; --warn-soft:#fbf0d9;
+  --display:"Source Serif 4", Georgia, serif; --body:"IBM Plex Sans", "Segoe UI", system-ui, sans-serif; --mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --paper:#0f1519; --sheet:#172027; --ink:#e7edf0; --muted:#9aa8b1; --rule:#2b3741;
+  --accent:#6fb1de; --accent-soft:#1b3243; --up:#5cc58a; --up-soft:#173327; --down:#ec8a74; --down-soft:#3a201b; --warn:#e5b14d; --warn-soft:#3a2d12;
+  color-scheme:dark; } }
+:root[data-theme="dark"]{
+  --paper:#0f1519; --sheet:#172027; --ink:#e7edf0; --muted:#9aa8b1; --rule:#2b3741;
+  --accent:#6fb1de; --accent-soft:#1b3243; --up:#5cc58a; --up-soft:#173327; --down:#ec8a74; --down-soft:#3a201b; --warn:#e5b14d; --warn-soft:#3a2d12;
+  color-scheme:dark; }
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.5}
+a{color:var(--accent)}
+.wrap{max-width:1180px;margin:0 auto;padding:28px 20px 60px;display:grid;grid-template-columns:minmax(0,1fr);gap:22px}
+.wrap>*,.company>*,.two>*,.main>*{min-width:0}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.2}
+h1{font-size:34px} h2{font-size:23px} h3{font-size:17px;font-family:var(--body);font-weight:600}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.muted{color:var(--muted)}
+.small{font-size:13px}
+.card{background:var(--sheet);border:1px solid var(--rule);border-radius:10px;padding:20px}
+header.top{display:grid;gap:10px}
+.brand{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.tag{font-family:var(--mono);font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--accent)}
+.lede{max-width:70ch;font-size:16px}
+.byline{font-size:13px;color:var(--muted)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.fact{background:var(--sheet);border:1px solid var(--rule);border-left:3px solid var(--accent);border-radius:8px;padding:12px 14px}
+.fact b{display:block;font-family:var(--mono);font-size:22px;font-weight:600}
+.fact span{font-size:13px;color:var(--muted)}
+.company{display:grid;grid-template-columns:1.1fr 1fr;gap:22px}
+@media (max-width:820px){.company{grid-template-columns:1fr}}
+table{border-collapse:collapse;width:100%}
+td,th{padding:5px 8px;text-align:left;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);font-weight:600}
+td.r,th.r{text-align:right}
+tr.total td{font-weight:600;border-top:2px solid var(--ink);border-bottom:none}
+.runbar{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+button,.btn{font:inherit;font-weight:600;border-radius:7px;border:1px solid var(--accent);background:var(--accent);color:#fff;padding:9px 16px;cursor:pointer}
+button.ghost{background:transparent;color:var(--accent)}
+button:disabled{opacity:.55;cursor:not-allowed}
+button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.status{font-size:14px;color:var(--muted)}
+.status.err{color:var(--down)}
+.main{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:22px;align-items:start}
+@media (max-width:920px){.main{grid-template-columns:1fr}}
+.sticky{position:sticky;top:12px;display:grid;gap:16px}
+@media (max-width:920px){.sticky{position:static}}
+.findings{display:grid;gap:12px}
+.f{border:1px solid var(--rule);border-left:4px solid var(--up);border-radius:9px;background:var(--sheet);padding:14px 16px;display:grid;gap:8px}
+.f.neg{border-left-color:var(--down)}
+.f.off{opacity:.55}
+.fhead{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.fref{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.amt{font-family:var(--mono);font-weight:600;font-size:18px;white-space:nowrap}
+.amt.up{color:var(--up)} .amt.down{color:var(--down)}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{font-size:12px;padding:2px 8px;border-radius:99px;background:var(--accent-soft);color:var(--ink);white-space:nowrap}
+.chip.high{background:var(--up-soft)} .chip.medium{background:var(--warn-soft)} .chip.low{background:var(--down-soft)}
+.chip.hit{background:var(--up-soft)} .chip.miss{background:var(--down-soft)}
+.f p{margin:0}
+.kv{display:grid;grid-template-columns:110px 1fr;gap:4px 10px;font-size:14px}
+.kv dt{color:var(--muted)} .kv dd{margin:0}
+.decide{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.seg{display:inline-flex;border:1px solid var(--rule);border-radius:7px;overflow:hidden}
+.seg button{border:none;border-radius:0;background:transparent;color:var(--ink);font-weight:500;padding:5px 12px}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--sheet)}
+details summary{cursor:pointer;color:var(--accent);font-size:14px}
+.lines{overflow-x:auto;margin-top:6px}
+.lines table{font-size:13px}
+.bridge{display:grid;gap:7px}
+.brow{display:grid;grid-template-columns:150px 1fr 92px;gap:8px;align-items:center;font-size:13px}
+.track{position:relative;height:20px;background:repeating-linear-gradient(90deg,transparent 0 calc(25% - 1px),var(--rule) calc(25% - 1px) 25%)}
+.bar{position:absolute;top:2px;bottom:2px;border-radius:3px}
+.bar.base{background:var(--ink)} .bar.up{background:var(--up)} .bar.down{background:var(--down)}
+.brow .v{text-align:right}
+.brow.tot{font-weight:600}
+.slider{display:grid;gap:6px}
+input[type=range]{width:100%;accent-color:var(--accent)}
+.value{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.value div{border:1px solid var(--rule);border-radius:8px;padding:10px}
+.value b{display:block;font-family:var(--mono);font-size:19px}
+.empty{border:1px dashed var(--rule);border-radius:10px;padding:22px;text-align:left;color:var(--muted)}
+.bench{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.score{border:1px solid var(--rule);border-radius:9px;padding:14px;background:var(--sheet)}
+.score b{font-family:var(--mono);font-size:28px;display:block}
+.meter{height:8px;border-radius:9px;background:var(--rule);overflow:hidden;margin-top:6px}
+.meter i{display:block;height:100%;background:var(--accent)}
+.tick{font-family:var(--mono);font-weight:600}
+.tick.y{color:var(--up)} .tick.n{color:var(--down)} .tick.p{color:var(--warn)}
+.scroll{overflow-x:auto}
+.ledgerctl{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+input[type=search],select,textarea{font:inherit;padding:7px 10px;border:1px solid var(--rule);border-radius:7px;background:var(--sheet);color:var(--ink)}
+input[type=search]{min-width:240px;flex:1}
+textarea{width:100%;min-height:70px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+@media (max-width:820px){.two{grid-template-columns:1fr}}
+ul.tight{margin:6px 0 0;padding-left:18px} ul.tight li{margin:3px 0}
+.memo{white-space:pre-wrap;font-family:var(--mono);font-size:12.5px;background:var(--paper);border:1px solid var(--rule);border-radius:8px;padding:12px;max-height:340px;overflow:auto}
+.pill{display:inline-block;font-family:var(--mono);font-size:12px;padding:2px 8px;border-radius:5px;background:var(--accent-soft)}
+footer{font-size:13px;color:var(--muted);display:grid;gap:6px}
+@media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
+.spin{display:inline-block;width:12px;height:12px;border:2px solid var(--rule);border-top-color:var(--accent);border-radius:50%;animation:sp 0.8s linear infinite;vertical-align:-1px;margin-right:6px}
+@keyframes sp{to{transform:rotate(360deg)}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <div class="brand"><h1>TrueEarnings</h1><span class="tag">AI first pass at quality of earnings</span></div>
+  <p class="lede">When a small business is sold, the price is a multiple of its <em>adjusted</em> earnings: the profit left after removing the owner's personal costs, one-time events and items booked in the wrong year. Finding those adjustments is a quality-of-earnings (QoE) review. Most small deals skip it because it costs more than they can justify. TrueEarnings reads the general ledger, proposes each adjustment with its reasoning and the document that would prove it, and leaves every decision to the analyst.</p>
+  <div class="byline">Built by Givemore Makusha · The College of St. Scholastica · B.Sc. Finance, B.A. Mathematics</div>
+</header>
+
+<section class="facts" aria-label="Why this matters">
+  <div class="fact"><b>$10K–$30K</b><span>typical cost of a small-business QoE report (<a href="https://smb.co/blog/what-is-a-quality-of-earnings-qofe-report-and-do-you-need-one">SMB.co</a>)</span></div>
+  <div class="fact"><b>$350K</b><span>median small-business sale price, Q1 2026 (<a href="https://lonelyentrepreneur.com/founder-business-valuation/">BizBuySell data</a>)</span></div>
+  <div class="fact"><b>2.57×</b><span>average earnings multiple, 2025: every $1 of missed or false earnings moves price ~$2.57 (<a href="https://www.vikingmergers.com/blog/sde-vs-ebitda-multiples-small-business/">BizBuySell data</a>)</span></div>
+</section>
+
+<section class="card company" id="company">
+  <div>
+    <span class="tag" id="ds-tag">Demo company · fictional</span>
+    <h2 id="co-name">Birchline Landscape &amp; Design, LLC</h2>
+    <p id="co-desc" class="muted">Duluth, Minnesota. Design-build landscaping, maintenance contracts and winter snow removal. Owner Dale Brandt is retiring and preparing to sell. Fiscal year 2025, income-statement general ledger: <span id="co-rows">0</span> transactions across <span id="co-groups">0</span> account–payee groups.</p>
+    <details style="margin-top:8px"><summary>Analyze your own ledger instead</summary>
+      <div style="display:grid;gap:8px;margin-top:10px" id="upload-box">
+        <p class="small muted" style="margin:0">Upload a CSV with columns for date, account, payee (or vendor/name), memo (or description) and amount. An optional type column (Revenue, COGS, OpEx, Other Income, Other) helps; otherwise it's inferred from the account name. Use anonymized data: the ledger is sent to Claude for review.</p>
+        <label class="small" for="ctx">Company context (industry, owner name, anything a QoE analyst would ask first)</label>
+        <textarea id="ctx" placeholder="e.g. HVAC contractor in Ohio, owner Pat Lee, 14 employees, owner retiring"></textarea>
+        <div class="runbar"><input type="file" id="csv" accept=".csv,text/csv"><button class="ghost" id="back-demo" type="button" hidden>Back to demo company</button></div>
+        <div class="status" id="upload-status"></div>
+      </div>
+    </details>
+  </div>
+  <div>
+    <table aria-label="Reported income statement" id="pl"></table>
+  </div>
+</section>
+
+<section class="card" style="display:grid;gap:12px">
+  <div class="runbar">
+    <button id="run" type="button">Run AI review</button>
+    <span class="status" id="status">Checking whether AI review is available in this view…</span>
+  </div>
+  <p class="small muted" style="margin:0">How it works: code groups the ledger by account and payee and does all the math (totals, months active, implied hourly rates). Claude reads those groups and proposes adjustments. You accept or reject each one; the earnings bridge and value update instantly.</p>
+</section>
+
+<section class="main">
+  <div style="display:grid;gap:12px">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap">
+      <h2>Proposed adjustments</h2><span class="small muted" id="f-count"></span>
+    </div>
+    <div id="summary-line" class="small"></div>
+    <div class="findings" id="findings"></div>
+  </div>
+  <aside class="sticky">
+    <div class="card" style="display:grid;gap:12px">
+      <h3>Earnings bridge (FY2025 EBITDA)</h3>
+      <div class="bridge" id="bridge"></div>
+    </div>
+    <div class="card slider">
+      <h3>What it's worth</h3>
+      <label for="mult" class="small">EBITDA multiple: <span class="num" id="mult-v">3.0×</span></label>
+      <input type="range" id="mult" min="2" max="5" step="0.1" value="3">
+      <div class="value">
+        <div><span class="small muted">At reported EBITDA</span><b id="val-rep">–</b></div>
+        <div><span class="small muted">At adjusted EBITDA</span><b id="val-adj">–</b></div>
+      </div>
+      <p class="small muted" style="margin:0" id="val-note">Illustrative only. Real multiples depend on industry, size, growth and deal terms.</p>
+    </div>
+    <div class="card" style="display:grid;gap:10px">
+      <h3>Hand-off package</h3>
+      <p class="small muted" style="margin:0">A one-page summary with the bridge, the accepted adjustments, the documents to request and the questions for the owner.</p>
+      <div class="runbar"><button type="button" class="ghost" id="copy-memo">Copy summary</button><button type="button" class="ghost" id="dl-memo" hidden>Download .md</button><button type="button" class="ghost" id="dl-csv" hidden>Download adjustments .csv</button></div>
+      <div class="status small" id="memo-status"></div>
+      <details><summary>Preview summary</summary><div class="memo" id="memo"></div></details>
+    </div>
+  </aside>
+</section>
+
+<section class="card" id="benchmark" style="display:grid;gap:14px">
+  <div>
+    <h2>Does it work? The benchmark</h2>
+    <p class="muted" style="margin:6px 0 0;max-width:80ch">Before any AI run, I planted 15 adjustments in the demo ledger and wrote an answer key, plus 13 decoys: legitimate costs that look suspicious (crew-truck leases, trade-association dues, routine legal work). The AI never sees the key. For comparison, a keyword screen searches payees and memos for the terms an analyst would filter on (settlement, personal, club, tuition, refund, gain on sale, and so on).</p>
+  </div>
+  <div class="bench" id="bench-scores"></div>
+  <div class="scroll"><table id="bench-table"></table></div>
+  <p class="small muted" style="margin:0" id="bench-note"></p>
+</section>
+
+<section class="card" id="ledger-sec">
+  <h2 style="margin-bottom:10px">The ledger</h2>
+  <div class="ledgerctl">
+    <input type="search" id="q" placeholder="Search payee, memo or account" aria-label="Search the ledger">
+    <select id="acct" aria-label="Filter by account"></select>
+  </div>
+  <div class="scroll"><table id="ledger"></table></div>
+  <div class="runbar" style="margin-top:10px"><button type="button" class="ghost" id="more">Show more</button><span class="small muted" id="lcount"></span></div>
+</section>
+
+<section class="two">
+  <div class="card">
+    <h2>What it can't do yet</h2>
+    <ul class="tight">
+      <li><b>Income statement only.</b> It reviews profit-and-loss accounts. A full QoE also covers the balance sheet: net working capital, proof of cash against bank statements, and debt-like items.</li>
+      <li><b>Flags are hypotheses.</b> Each adjustment lists the document that would prove or kill it. Nothing should reach a buyer until those documents are reviewed.</li>
+      <li><b>Market rates are estimates.</b> Replacement salaries and market rent come from the model's general knowledge, stated as assumptions. A real engagement would use local comps.</li>
+      <li><b>One year, one company.</b> The benchmark is a single synthetic company with an answer key I wrote. It shows the method works on known cases; it is not a statistical accuracy rate.</li>
+      <li><b>Data privacy.</b> Uploaded ledgers are sent to Claude. Use anonymized data until this runs inside a firm's own environment.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>Where it goes next</h2>
+    <ul class="tight">
+      <li>Three-year trend view, so one-time items stand out against a baseline instead of relying on memos.</li>
+      <li>Bank-statement upload for proof of cash: do deposits match recorded revenue?</li>
+      <li>Direct import from QuickBooks Online and Xero instead of CSV.</li>
+      <li>A seller-readiness mode: owners clean up add-backs a year before going to market, when it's cheapest.</li>
+      <li>A buyer mode for search-fund and SBA buyers, scoring a broker's add-back schedule against the ledger.</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div>Demo data: Birchline Landscape &amp; Design is fictional. The ledger was generated for this project, with planted adjustments and decoys. Any resemblance to a real business is coincidental.</div>
+  <div>Reported EBITDA = net income + interest + depreciation. The company is a pass-through LLC with no entity-level income tax; other income is included in reported EBITDA, as it was booked.</div>
+  <div id="run-meta"></div>
+</footer>
+</div>
+
+<script id="ledger-data" type="application/json">/*__LEDGER__*/</script>
+<script id="key-data" type="application/json">/*__KEY__*/</script>
+<script id="saved-run" type="application/json">/*__RUN__*/</script>
+<script>
+(function(){
+"use strict";
+const $ = s => document.querySelector(s);
+const esc = s => String(s == null ? "" : s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const money = (v, paren=true) => { const a = Math.round(Math.abs(v)).toLocaleString("en-US"); return v < 0 ? (paren ? "($"+a+")" : "-$"+a) : "$"+a; };
+const kfmt = v => { const a=Math.abs(v); const s = a>=1e6 ? "$"+(a/1e6).toFixed(2)+"M" : "$"+Math.round(a/1000)+"K"; return v<0?"("+s+")":s; };
+const LIVE_URL = "https://claude.ai/artifact/8mnVtrVb1diaPj2pMhEAKp";
+const STANDALONE = /*__STANDALONE__*/false;
+const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+const DEMO_ROWS = JSON.parse($("#ledger-data").textContent);
+const KEY = JSON.parse($("#key-data").textContent);
+let SAVED = null; try { SAVED = JSON.parse($("#saved-run").textContent); } catch(e) { SAVED = null; }
+
+const state = { mode:"demo", rows:DEMO_ROWS, context:"", groups:[], gmap:{}, pl:null, run:null, decisions:{}, mult:3, ledgerShown:40, sample:null, db:null, downloads:null };
+
+/* ---------- accounting ---------- */
+function inferType(acct){
+  const a = acct.toLowerCase();
+  if (/depreciation|amortization/.test(a)) return "Other";
+  if (/interest expense|interest paid|^interest$/.test(a)) return "Other";
+  if (/income tax/.test(a)) return "Other";
+  if (/other income|gain|interest income|misc(ellaneous)? income/.test(a)) return "Other Income";
+  if (/revenue|sales|income|fees earned/.test(a)) return "Revenue";
+  if (/cost of|cogs|materials|subcontract|direct labor|field labor|job/.test(a)) return "COGS";
+  return "OpEx";
+}
+function computePL(rows){
+  const by = {}; let rev=0,cogs=0,opex=0,oi=0,other=0,da=0,intr=0,tax=0;
+  for (const r of rows){
+    by[r.type+"|"+r.account] = (by[r.type+"|"+r.account]||0) + r.amount;
+    if (r.type==="Revenue") rev+=r.amount; else if (r.type==="COGS") cogs+=r.amount; else if (r.type==="OpEx") opex+=r.amount;
+    else if (r.type==="Other Income") oi+=r.amount; else { other+=r.amount; const a=r.account.toLowerCase();
+      if (/depreciation|amortization/.test(a)) da+=r.amount; else if (/interest/.test(a)) intr+=r.amount; else if (/tax/.test(a)) tax+=r.amount; }
+  }
+  const ni = rev-cogs-opex+oi-other;
+  return {by, rev, cogs, gp:rev-cogs, opex, oi, other, da, intr, tax, ni, ebitda: ni+da+intr+tax};
+}
+function groupRows(rows){
+  const order = {"Revenue":0,"COGS":1,"OpEx":2,"Other Income":3,"Other":4};
+  const m = new Map();
+  for (const r of rows){
+    const k = r.account+"|"+r.payee;
+    if (!m.has(k)) m.set(k,{key:k,account:r.account,type:r.type,payee:r.payee,total:0,count:0,months:new Set(),memos:new Map(),rows:[],hours:0,hourRows:0});
+    const g = m.get(k); g.total+=r.amount; g.count++; g.rows.push(r);
+    const mo = parseInt(String(r.date).slice(5,7),10); if (mo) g.months.add(mo);
+    const mm = g.memos.get(r.memo)||{n:0,t:0}; mm.n++; mm.t+=r.amount; g.memos.set(r.memo,mm);
+    const h = /([\d.]+)\s*hrs?\b/i.exec(r.memo||""); if (h){ g.hours+=parseFloat(h[1]); g.hourRows++; }
+  }
+  const arr = [...m.values()].sort((a,b)=> (order[a.type]-order[b.type]) || a.account.localeCompare(b.account) || b.total-a.total);
+  arr.forEach((g,i)=>{ g.id = "G"+String(i+1).padStart(2,"0"); });
+  return arr;
+}
+function monthSpan(set){
+  const a=[...set].sort((x,y)=>x-y); if(!a.length) return "-";
+  if (a.length===12) return "all 12 months";
+  return a.map(x=>MONTHS[x-1]).join(" ");
+}
+
+/* ---------- prompt ---------- */
+function buildPrompt(){
+  const pl = state.pl;
+  const plLines = Object.entries(pl.by).map(([k,v])=>{const [t,a]=k.split("|");return `${t} | ${a} | ${Math.round(v)}`;}).join("\n");
+  const gl = state.groups.map(g=>{
+    const memos=[...g.memos.entries()].sort((a,b)=>b[1].t-a[1].t).slice(0,6).map(([mm,o])=>`"${mm}" x${o.n} = ${Math.round(o.t)}`).join("; ");
+    let extra=""; if (g.hourRows===g.count && g.hours>0) extra=` | hours ${g.hours} | implied rate ${(g.total/g.hours).toFixed(2)}/hr`;
+    return `${g.id} | ${g.type} | ${g.account} | payee: ${g.payee} | total ${Math.round(g.total)} | ${g.count} txns | ${monthSpan(g.months)}${extra} | memos: ${memos}`;
+  }).join("\n");
+  const ctx = state.mode==="demo"
+    ? "Birchline Landscape & Design, LLC, Duluth, Minnesota. Design-build landscaping, maintenance contracts and winter snow removal. Single owner: Dale Brandt (100%), who is retiring. Likely buyer: a strategic acquirer or search-fund operator who will hire a general manager to replace the owner. Fiscal year Jan-Dec 2025. Pass-through LLC, no entity income tax."
+    : (state.context || "No context provided by the user.");
+  return `You are a senior transaction-advisory analyst doing a first-pass quality-of-earnings (QoE) review of a small business being sold. You receive one fiscal year of the income-statement general ledger, already grouped by account and payee. Code has done the arithmetic; your job is judgment.
+
+Identify EBITDA normalization adjustments a buyer's QoE team would raise, such as:
+- owner compensation versus the market cost of replacing the owner
+- related-party transactions at non-market terms (look for the owner's surname and owner-controlled entities)
+- personal or discretionary expenses run through the business
+- non-recurring expenses, and non-recurring revenue or income
+- out-of-period items (costs or revenue that belong to another fiscal year)
+- missing or understated costs (gaps in recurring expenses, below-market pay to related parties, costs a new owner will incur)
+
+Rules:
+- Only flag items with a concrete reason visible in the data. Do not flag ordinary operating costs.
+- Interest and depreciation are already excluded from EBITDA; do not flag them.
+- direction: 1 if the adjustment increases EBITDA (add-back), -1 if it decreases EBITDA.
+- amount: your best estimate of the annual EBITDA effect, as a positive number. State any market-rate assumption you used.
+- defensibility: "high" if documents will clearly support it; "medium" if supportable but a buyer may push back; "low" if likely to be challenged.
+- groups: the group IDs (e.g. "G07") the adjustment is based on.
+- At most 20 findings, ordered by amount, largest first.
+
+Return JSON only, no prose before or after:
+{"findings":[{"groups":["G00"],"title":"short title","category":"Owner compensation|Related party|Personal expense|Non-recurring expense|Non-recurring revenue|Non-recurring income|Out-of-period|Missing cost|Other","direction":1,"amount":0,"defensibility":"high|medium|low","reasoning":"2-3 sentences citing the specific data","assumption":"market assumption, or empty string","evidence":"documents to request","question":"one question for the owner"}],"summary":"two sentences on overall earnings quality"}
+
+COMPANY CONTEXT
+${ctx}
+
+REPORTED INCOME STATEMENT BY ACCOUNT (type | account | amount)
+${plLines}
+Reported EBITDA (net income + interest + depreciation + income tax): ${Math.round(pl.ebitda)}
+
+LEDGER GROUPS (id | type | account | payee | total | count | months | memos)
+${gl}`;
+}
+function extractJSON(text){
+  const s = text.indexOf("{"), e = text.lastIndexOf("}");
+  if (s<0||e<=s) throw new Error("The response contained no JSON.");
+  return JSON.parse(text.slice(s,e+1));
+}
+function normalizeRun(obj){
+  const valid = new Set(state.groups.map(g=>g.id));
+  const fs = (obj.findings||[]).map((f,i)=>({
+    ref:"QE-"+String(i+1).padStart(2,"0"),
+    groups:(Array.isArray(f.groups)?f.groups:[f.groups]).map(String).map(s=>s.trim().toUpperCase()).filter(g=>valid.has(g)),
+    title:String(f.title||"Untitled adjustment"), category:String(f.category||"Other"),
+    direction: Number(f.direction)<0?-1:1, amount: Math.abs(Number(f.amount)||0),
+    defensibility: ["high","medium","low"].includes(String(f.defensibility).toLowerCase())?String(f.defensibility).toLowerCase():"medium",
+    reasoning:String(f.reasoning||""), assumption:String(f.assumption||""), evidence:String(f.evidence||""), question:String(f.question||"")
+  }));
+  fs.forEach(f=>{ f.groupKeys = f.groups.map(id=>state.gmap[id].key); });
+  return {findings:fs, summary:String(obj.summary||"")};
+}
+
+/* ---------- AI run ---------- */
+async function runAI(){
+  if (!state.sample) return;
+  const btn=$("#run"), st=$("#status");
+  btn.disabled=true; st.className="status"; st.innerHTML=`<span class="spin"></span>Claude is reviewing ${state.groups.length} account–payee groups…`;
+  const t0 = Date.now();
+  try{
+    const prompt = buildPrompt();
+    const res = await state.sample(prompt, {modelTier:"complex", cache:false, onText:({text})=>{ st.innerHTML=`<span class="spin"></span>Claude is reviewing ${state.groups.length} account–payee groups… ${Math.round((Date.now()-t0)/1000)}s, ${text.length.toLocaleString()} characters written`; }});
+    const parsed = extractJSON(res.text);
+    const run = normalizeRun(parsed);
+    run.ranAt = new Date().toISOString(); run.seconds = Math.round((Date.now()-t0)/1000);
+    run.model = res.modelApplied || "Claude (complex tier)"; run.mode = state.mode; run.promptChars = prompt.length;
+    run.findingsRaw = parsed.findings;
+    state.run = run; state.decisions = defaultDecisions(run);
+    st.textContent = `Review finished in ${run.seconds}s: ${run.findings.length} proposed adjustments.`;
+    if (state.mode==="demo" && state.db){
+      try { await state.db.doc("runs/latest").set({json: JSON.stringify(runForSave(run)), ranAt: run.ranAt}); st.textContent += " Saved as this page's latest run."; }
+      catch(e){ /* viewers without write access keep the run in this view only */ }
+    }
+    renderAll();
+  }catch(e){
+    st.className="status err";
+    st.textContent = (e && e.code==="rate_limited") ? "Claude is busy right now. Wait a minute, then run the review again."
+      : (e && e.code==="not_granted") ? "AI review isn't available in this view. Open the page signed in to Claude to run it."
+      : "The review didn't finish: "+(e && e.message ? e.message : "unknown error")+". Run it again.";
+  }finally{ btn.disabled=false; }
+}
+function runForSave(run){ return {findingsRaw:run.findingsRaw, summary:run.summary, ranAt:run.ranAt, seconds:run.seconds, model:run.model, promptChars:run.promptChars}; }
+function loadSaved(obj){
+  const run = normalizeRun({findings:obj.findingsRaw, summary:obj.summary});
+  Object.assign(run,{ranAt:obj.ranAt, seconds:obj.seconds, model:obj.model, promptChars:obj.promptChars, findingsRaw:obj.findingsRaw, mode:"demo", saved:true});
+  return run;
+}
+function defaultDecisions(run){ const d={}; run.findings.forEach(f=>{ d[f.ref] = f.defensibility==="low" ? "reject" : "accept"; }); return d; }
+
+/* ---------- scoring ---------- */
+function scoreFlags(flagSets){ // flagSets: [{keys:Set, direction}]
+  const planted = KEY.planted.map(p=>{
+    const hits = flagSets.filter(f=>p.groups.some(g=>f.keys.has(g)));
+    const okDir = hits.filter(h=>h.direction==null || h.direction===p.direction);
+    const status = !hits.length ? "miss" : !okDir.length ? "wrongdir" : okDir.some(h=>h.amount==null || h.amount>0) ? "hit" : "noamt";
+    return {...p, status};
+  });
+  const plantedKeys = new Set(KEY.planted.flatMap(p=>p.groups));
+  const decoyHits = KEY.decoys.filter(d=>flagSets.some(f=>f.keys.has(d)));
+  const other = flagSets.filter(f=>![...f.keys].some(k=>plantedKeys.has(k)||KEY.decoys.includes(k)));
+  return {planted, found:planted.filter(p=>p.status==="hit").length, noamt:planted.filter(p=>p.status==="noamt").length, decoyHits, other};
+}
+const KEYWORDS = ["settlement","litigation","lawsuit","legal","personal","owner","family","vacation","resort","club","tuition","school","donation","charit","gift","household","home","refund","erc","ppp","gain on sale","loss on sale","one-time","one time","non-recurring","nonrecurring","severance","bonus","relocation","recruit","lexus","bmw","mercedes","porsche","tesla","boat"];
+function keywordFlags(groups){
+  return groups.filter(g=>{ const t=(g.payee+" "+[...g.memos.keys()].join(" ")).toLowerCase(); return KEYWORDS.some(k=>t.includes(k)); })
+    .map(g=>({keys:new Set([g.key]), direction:null, group:g}));
+}
+
+/* ---------- render ---------- */
+function renderCompany(){
+  const pl = state.pl;
+  $("#co-rows").textContent = state.rows.length.toLocaleString();
+  $("#co-groups").textContent = state.groups.length;
+  const line=(l,v,cls="")=>`<tr class="${cls}"><td>${l}</td><td class="r num">${money(v)}</td></tr>`;
+  $("#pl").innerHTML = `<thead><tr><th>Reported FY2025</th><th class="r">Amount</th></tr></thead><tbody>`+
+    line("Revenue",pl.rev)+line("Cost of revenue",-pl.cogs)+line("Gross profit",pl.gp,"total")+line("Operating expenses",-pl.opex)+
+    line("Other income",pl.oi)+line("Interest &amp; depreciation",-(pl.da+pl.intr))+(pl.tax?line("Income tax",-pl.tax):"")+line("Net income",pl.ni,"total")+
+    line("Reported EBITDA",pl.ebitda,"total")+`</tbody>`;
+}
+function accepted(){ return state.run ? state.run.findings.filter(f=>state.decisions[f.ref]==="accept") : []; }
+function adjTotal(){ return accepted().reduce((s,f)=>s+f.direction*f.amount,0); }
+function renderFindings(){
+  const box=$("#findings");
+  if (!state.run){
+    $("#f-count").textContent=""; $("#summary-line").textContent="";
+    box.innerHTML = `<div class="empty"><b style="color:var(--ink)">No AI review on this ledger yet.</b><br>Run the review to see proposed adjustments. Each one comes with its reasoning, the ledger lines behind it, the documents that would prove it, and a question for the owner.</div>`;
+    return;
+  }
+  const r=state.run; const acc=accepted().length;
+  $("#f-count").textContent = `${r.findings.length} proposed · ${acc} accepted`;
+  $("#summary-line").innerHTML = r.summary ? `<span class="muted">Claude's read:</span> ${esc(r.summary)}` : "";
+  const score = (state.mode==="demo") ? scoreFlags(r.findings.map(f=>({keys:new Set(f.groupKeys),direction:f.direction,amount:f.amount}))) : null;
+  const plantedKeys = new Set(KEY.planted.flatMap(p=>p.groups));
+  box.innerHTML = r.findings.map(f=>{
+    const dec=state.decisions[f.ref]; const neg=f.direction<0;
+    let keyChip="";
+    if (score && state.showKey){
+      const hitP = KEY.planted.find(p=>p.groups.some(g=>f.groupKeys.includes(g)));
+      const isDecoy = f.groupKeys.some(k=>KEY.decoys.includes(k)) && !f.groupKeys.some(k=>plantedKeys.has(k));
+      keyChip = hitP ? `<span class="chip hit">Answer key #${hitP.n}${hitP.direction!==f.direction?" (opposite direction)":""}</span>` : isDecoy ? `<span class="chip miss">Decoy: legitimate cost</span>` : `<span class="chip">Not in answer key</span>`;
+    }
+    const lines = f.groups.flatMap(id=>state.gmap[id].rows).sort((a,b)=>a.date.localeCompare(b.date));
+    const lineRows = lines.slice(0,60).map(x=>`<tr><td class="num">${x.date}</td><td>${esc(x.payee)}</td><td>${esc(x.memo)}</td><td>${esc(x.account)}</td><td class="r num">${money(x.amount)}</td></tr>`).join("");
+    return `<article class="f ${neg?"neg":""} ${dec==="reject"?"off":""}">
+      <div class="fhead"><div><div class="fref">${f.ref} · ${f.groups.join(", ")||"no group"}</div><h3>${esc(f.title)}</h3></div>
+        <div class="amt ${neg?"down":"up"}" title="${neg?"Reduces":"Increases"} EBITDA">${neg?"−":"+"}${money(f.amount)}</div></div>
+      <div class="chips"><span class="chip">${esc(f.category)}</span><span class="chip ${f.defensibility}">${f.defensibility} defensibility</span><span class="chip">≈ ${kfmt(f.direction*f.amount*state.mult)} of price at ${state.mult.toFixed(1)}×</span>${keyChip}</div>
+      <p>${esc(f.reasoning)}</p>
+      <dl class="kv">${f.assumption?`<dt>Assumption</dt><dd>${esc(f.assumption)}</dd>`:""}<dt>Request</dt><dd>${esc(f.evidence)}</dd><dt>Ask the owner</dt><dd>${esc(f.question)}</dd></dl>
+      <div class="decide"><span class="seg" role="group" aria-label="Decision for ${f.ref}">
+        <button type="button" data-ref="${f.ref}" data-d="accept" aria-pressed="${dec==="accept"}">Accept</button>
+        <button type="button" data-ref="${f.ref}" data-d="reject" aria-pressed="${dec==="reject"}">Reject</button></span>
+        <details><summary>Show ${lines.length} ledger line${lines.length===1?"":"s"}</summary><div class="lines"><table><tbody>${lineRows}</tbody></table>${lines.length>60?`<p class="small muted">First 60 of ${lines.length} lines.</p>`:""}</div></details>
+      </div>
+    </article>`;
+  }).join("");
+}
+function renderBridge(){
+  const pl=state.pl; const acc=accepted();
+  const cats = {}; acc.forEach(f=>{ cats[f.category]=(cats[f.category]||0)+f.direction*f.amount; });
+  const steps=[{label:"Reported EBITDA",v:pl.ebitda,base:true}];
+  Object.entries(cats).sort((a,b)=>b[1]-a[1]).forEach(([c,v])=>steps.push({label:c,v}));
+  const adj = pl.ebitda+adjTotal(); steps.push({label:"Adjusted EBITDA",v:adj,base:true,tot:true});
+  let run=0; const pts=[0];
+  steps.forEach(s=>{ if(s.base){pts.push(s.v);run=s.v;} else {pts.push(run, run+s.v); run+=s.v;} });
+  const lo=Math.min(0,...pts), hi=Math.max(...pts)*1.04 || 1; const pct=v=>((v-lo)/(hi-lo))*100;
+  run=0;
+  $("#bridge").innerHTML = steps.map(s=>{
+    let a,b,cls;
+    if (s.base){a=0;b=s.v;cls="base";run=s.v;} else {a=run;b=run+s.v;cls=s.v>=0?"up":"down";run+=s.v;}
+    const L=pct(Math.min(a,b)), W=Math.max(0.6,Math.abs(pct(b)-pct(a)));
+    return `<div class="brow ${s.tot?"tot":""}"><span>${esc(s.label)}</span><div class="track"><div class="bar ${cls}" style="left:${L}%;width:${W}%"></div></div><span class="v num">${s.base?money(s.v):(s.v>=0?"+":"−")+money(Math.abs(s.v))}</span></div>`;
+  }).join("") + (state.run?"":`<p class="small muted" style="margin:4px 0 0">Run the AI review to build the bridge.</p>`);
+  $("#mult-v").textContent = state.mult.toFixed(1)+"×";
+  $("#val-rep").textContent = kfmt(pl.ebitda*state.mult);
+  $("#val-adj").textContent = state.run ? kfmt(adj*state.mult) : "–";
+  $("#val-note").textContent = state.run ? `Accepted adjustments move the indicated price by ${kfmt((adj-pl.ebitda)*state.mult)}. Illustrative only: real multiples depend on industry, size, growth and deal terms.` : "Illustrative only. Real multiples depend on industry, size, growth and deal terms.";
+}
+function renderBench(){
+  const sec=$("#benchmark");
+  if (state.mode!=="demo"){ sec.hidden=true; return; } sec.hidden=false;
+  const kw = scoreFlags(keywordFlags(state.groups));
+  const ai = state.run ? scoreFlags(state.run.findings.map(f=>({keys:new Set(f.groupKeys),direction:f.direction,amount:f.amount}))) : null;
+  const N=KEY.planted.length, D=KEY.decoys.length;
+  const card=(title,v,of,sub)=>`<div class="score"><span class="small muted">${title}</span><b>${v==null?"–":v} <span class="small muted">/ ${of}</span></b><div class="meter"><i style="width:${v==null?0:v/of*100}%"></i></div><span class="small muted">${sub}</span></div>`;
+  $("#bench-scores").innerHTML =
+    card("AI: planted adjustments found",ai?ai.found:null,N, ai?("Right direction, with an amount"+(ai.noamt?`; ${ai.noamt} more flagged but left at $0 pending data`:"")):"Run the AI review to score it")+
+    card("Keyword screen: planted found",kw.found,N,"Can't tell direction or amount; counts any hit")+
+    card("AI: decoys wrongly flagged",ai?ai.decoyHits.length:null,D, ai?`Plus ${ai.other.length} flag${ai.other.length===1?"":"s"} outside the key`:"Lower is better")+
+    card("Keyword screen: decoys flagged",kw.decoyHits.length,D,`Plus ${kw.other.length} flag${kw.other.length===1?"":"s"} outside the key`);
+  const mark=s=> s==="hit"?`<span class="tick y">✓ found</span>`: s==="wrongdir"?`<span class="tick p">± wrong direction</span>`: s==="noamt"?`<span class="tick p">✓ flagged, $0 pending data</span>`:`<span class="tick n">✗ missed</span>`;
+  const show = state.run && state.showKey;
+  $("#bench-table").innerHTML = `<thead><tr><th>#</th><th>Planted adjustment</th><th>Category</th><th class="r">Key amount</th><th>Keyword screen</th><th>AI</th></tr></thead><tbody>`+
+    KEY.planted.map((p,i)=>`<tr><td class="num">${p.n}</td><td>${show?`<b>${esc(p.title)}</b><br><span class="small muted">${esc(p.why)}</span>`:`<span class="muted">Hidden until you reveal the key</span>`}</td><td>${show?esc(p.category):""}</td><td class="r num">${show?(p.direction<0?"−":"+")+money(p.amount):""}</td><td>${mark(kw.planted[i].status)}</td><td>${ai?mark(ai.planted[i].status):"–"}</td></tr>`).join("")+`</tbody>`;
+  $("#bench-note").innerHTML = (state.run?`<button type="button" class="ghost" id="reveal">${state.showKey?"Hide":"Reveal"} the answer key</button> `:"")+
+    `<span>The keyword screen catches items whose memos name the problem. The planted items that need reasoning (a spouse on payroll, rent to the owner's own LLC, a son paid half the crew rate, a missing half-year of premiums, next year's policy booked this year) have no tell-tale word.</span>`;
+  const rv=$("#reveal"); if (rv) rv.onclick=()=>{ state.showKey=!state.showKey; renderFindings(); renderBench(); };
+}
+function renderLedger(){
+  const sel=$("#acct"); const accts=[...new Set(state.rows.map(r=>r.account))].sort();
+  if (sel.dataset.mode!==state.mode+state.rows.length){ sel.innerHTML=`<option value="">All accounts</option>`+accts.map(a=>`<option>${esc(a)}</option>`).join(""); sel.dataset.mode=state.mode+state.rows.length; }
+  const q=$("#q").value.trim().toLowerCase(), a=sel.value;
+  const rows=state.rows.filter(r=>(!a||r.account===a)&&(!q||(r.payee+" "+r.memo+" "+r.account).toLowerCase().includes(q)));
+  $("#ledger").innerHTML=`<thead><tr><th>Date</th><th>Account</th><th>Payee</th><th>Memo</th><th class="r">Amount</th></tr></thead><tbody>`+
+    rows.slice(0,state.ledgerShown).map(r=>`<tr><td class="num">${r.date}</td><td>${esc(r.account)}</td><td>${esc(r.payee)}</td><td>${esc(r.memo)}</td><td class="r num">${money(r.amount)}</td></tr>`).join("")+`</tbody>`;
+  $("#lcount").textContent=`Showing ${Math.min(state.ledgerShown,rows.length)} of ${rows.length.toLocaleString()} lines`;
+  $("#more").hidden = rows.length<=state.ledgerShown;
+}
+function buildMemo(){
+  const pl=state.pl, acc=accepted(), adj=pl.ebitda+adjTotal();
+  const name = state.mode==="demo" ? "Birchline Landscape & Design, LLC (demo)" : "Uploaded ledger";
+  let s=`QUALITY OF EARNINGS - FIRST PASS\n${name} | FY2025 | prepared with TrueEarnings\n\n`;
+  s+=`Reported EBITDA            ${money(pl.ebitda).padStart(12)}\n`;
+  acc.forEach(f=>{ s+=`${(f.ref+" "+f.title).slice(0,40).padEnd(40)} ${((f.direction<0?"-":"+")+money(f.amount)).padStart(12)}\n`; });
+  s+=`Adjusted EBITDA            ${money(adj).padStart(12)}\n\nAt ${state.mult.toFixed(1)}x: indicated value ${kfmt(pl.ebitda*state.mult)} reported vs ${kfmt(adj*state.mult)} adjusted (illustrative).\n\n`;
+  s+=`DOCUMENTS TO REQUEST\n`+acc.map(f=>`- [${f.ref}] ${f.evidence}`).join("\n")+`\n\nQUESTIONS FOR THE OWNER\n`+acc.map(f=>`- [${f.ref}] ${f.question}`).join("\n");
+  const rej = state.run ? state.run.findings.filter(f=>state.decisions[f.ref]==="reject") : [];
+  if (rej.length) s+=`\n\nREVIEWED AND REJECTED\n`+rej.map(f=>`- [${f.ref}] ${f.title} (${f.direction<0?"-":"+"}${money(f.amount)})`).join("\n");
+  s+=`\n\nAll adjustments are hypotheses until supported by the documents listed. Income-statement review only; excludes net working capital, proof of cash and debt-like items.`;
+  return s;
+}
+function buildCSV(){
+  const q=v=>`"${String(v).replace(/"/g,'""')}"`;
+  const head=["ref","decision","title","category","direction","amount","defensibility","groups","reasoning","assumption","evidence","question"];
+  return [head.join(",")].concat((state.run?state.run.findings:[]).map(f=>[f.ref,state.decisions[f.ref],f.title,f.category,f.direction,f.amount,f.defensibility,f.groups.join(" "),f.reasoning,f.assumption,f.evidence,f.question].map(q).join(","))).join("\n");
+}
+function renderMemo(){ $("#memo").textContent = state.run ? buildMemo() : "Run the AI review to generate the summary."; }
+function renderMeta(){
+  const r=state.run;
+  $("#run-meta").textContent = r ? `AI run: ${r.model}${r.ranAt?", "+new Date(r.ranAt).toLocaleString("en-US",{dateStyle:"medium",timeStyle:"short"}):""}${r.seconds?", "+r.seconds+"s":""}${r.saved?" (saved run; the AI never saw the answer key)":""}.` : "";
+}
+function renderAll(){ renderCompany(); renderFindings(); renderBridge(); renderBench(); renderLedger(); renderMemo(); renderMeta(); }
+
+function setDataset(rows, mode){
+  state.rows=rows; state.mode=mode; state.groups=groupRows(rows); state.gmap=Object.fromEntries(state.groups.map(g=>[g.id,g]));
+  state.pl=computePL(rows); state.run=null; state.decisions={}; state.ledgerShown=40; state.showKey=false;
+  const demo = mode==="demo";
+  $("#ds-tag").textContent = demo ? "Demo company · fictional" : "Your uploaded ledger";
+  $("#co-name").textContent = demo ? "Birchline Landscape & Design, LLC" : "Uploaded ledger";
+  $("#back-demo").hidden = demo;
+  if (!demo) $("#co-desc").innerHTML = `Your ledger: <span id="co-rows">0</span> transactions across <span id="co-groups">0</span> account–payee groups. Revenue, costs and EBITDA are computed from your file.`;
+  else $("#co-desc").innerHTML = `Duluth, Minnesota. Design-build landscaping, maintenance contracts and winter snow removal. Owner Dale Brandt is retiring and preparing to sell. Fiscal year 2025, income-statement general ledger: <span id="co-rows">0</span> transactions across <span id="co-groups">0</span> account–payee groups.`;
+}
+
+/* ---------- CSV upload ---------- */
+function parseCSV(text){
+  const out=[]; let row=[], cur="", q=false;
+  for (let i=0;i<text.length;i++){ const c=text[i];
+    if (q){ if (c==='"'){ if (text[i+1]==='"'){cur+='"';i++;} else q=false; } else cur+=c; }
+    else if (c==='"') q=true; else if (c===','){row.push(cur);cur="";} else if (c==='\n'||c==='\r'){ if(c==='\r'&&text[i+1]==='\n')i++; row.push(cur);cur=""; if(row.some(x=>x.trim()!==""))out.push(row); row=[]; } else cur+=c; }
+  row.push(cur); if (row.some(x=>x.trim()!=="")) out.push(row); return out;
+}
+function rowsFromCSV(text){
+  const t=parseCSV(text); if (t.length<2) throw new Error("The file has no data rows.");
+  const h=t[0].map(x=>x.trim().toLowerCase());
+  const find=(...names)=>h.findIndex(x=>names.some(n=>x===n||x.includes(n)));
+  const iD=find("date"), iA=find("account"), iP=find("payee","vendor","name","customer"), iM=find("memo","description","desc"), iT=find("type","class"), iAmt=find("amount","net"), iDr=find("debit"), iCr=find("credit");
+  if (iA<0) throw new Error("No 'account' column found.");
+  if (iAmt<0 && iDr<0) throw new Error("No 'amount' (or debit/credit) column found.");
+  const num=s=>{ s=String(s||"").replace(/[$,\s]/g,""); let neg=/^\(.*\)$/.test(s); s=s.replace(/[()]/g,""); const v=parseFloat(s)||0; return neg?-v:v; };
+  const rows=[]; const tyMap={revenue:"Revenue",income:"Revenue",sales:"Revenue",cogs:"COGS","cost of goods sold":"COGS","cost of revenue":"COGS",expense:"OpEx",opex:"OpEx","other income":"Other Income",other:"Other","other expense":"Other"};
+  t.slice(1).forEach((r,i)=>{
+    const account=(r[iA]||"").trim(); if(!account) return;
+    let type = iT>=0 ? (tyMap[(r[iT]||"").trim().toLowerCase()]||null) : null; if(!type) type=inferType(account);
+    let amount = iAmt>=0 ? num(r[iAmt]) : (num(r[iDr])-num(r[iCr]));
+    if (iAmt<0 && (type==="Revenue"||type==="Other Income")) amount=-amount;
+    let date = iD>=0 ? String(r[iD]||"").trim() : ""; const dd=new Date(date); if(!isNaN(dd)) date=dd.toISOString().slice(0,10);
+    rows.push({id:"U"+(i+1),date,account,type,payee:(iP>=0?(r[iP]||"").trim():"")||"(no payee)",memo:iM>=0?(r[iM]||"").trim():"",amount});
+  });
+  if (!rows.length) throw new Error("No usable rows found.");
+  return rows;
+}
+
+/* ---------- events ---------- */
+document.addEventListener("click",e=>{
+  const b=e.target.closest("button[data-ref]"); if(!b) return;
+  state.decisions[b.dataset.ref]=b.dataset.d; renderFindings(); renderBridge(); renderMemo();
+  const nf = document.querySelector(`button[data-ref="${b.dataset.ref}"][data-d="${b.dataset.d}"]`); if (nf) nf.focus();
+});
+$("#mult").addEventListener("input",e=>{ state.mult=parseFloat(e.target.value); renderBridge(); renderFindings(); renderMemo(); });
+$("#q").addEventListener("input",()=>{ state.ledgerShown=40; renderLedger(); });
+$("#acct").addEventListener("change",()=>{ state.ledgerShown=40; renderLedger(); });
+$("#more").addEventListener("click",()=>{ state.ledgerShown+=80; renderLedger(); });
+$("#run").addEventListener("click",runAI);
+$("#copy-memo").addEventListener("click",async()=>{ const st=$("#memo-status"); try{ await navigator.clipboard.writeText(buildMemo()); st.textContent="Summary copied."; }catch(e){ st.textContent="Copy was blocked here. Open the preview below and select the text."; }});
+$("#dl-memo").addEventListener("click",async()=>{ const st=$("#memo-status"); try{ await state.downloads.save({filename:"TrueEarnings-QoE-summary.md",data:buildMemo()}); st.textContent="Summary downloaded."; }catch(e){ st.textContent="The download didn't go through. Use Copy summary instead."; }});
+$("#dl-csv").addEventListener("click",async()=>{ const st=$("#memo-status"); try{ await state.downloads.save({filename:"TrueEarnings-adjustments.csv",data:buildCSV()}); st.textContent="Adjustments downloaded."; }catch(e){ st.textContent="The download didn't go through. Use Copy summary instead."; }});
+$("#csv").addEventListener("change",async e=>{
+  const f=e.target.files[0]; if(!f) return; const st=$("#upload-status");
+  try{ const rows=rowsFromCSV(await f.text()); state.context=$("#ctx").value.trim(); setDataset(rows,"upload"); renderAll(); updateRunStatus();
+    st.textContent=`Loaded ${rows.length.toLocaleString()} rows from ${f.name}.`; }
+  catch(err){ st.textContent="Couldn't read that file: "+err.message; }
+});
+$("#ctx").addEventListener("input",e=>{ state.context=e.target.value.trim(); });
+$("#back-demo").addEventListener("click",()=>{ setDataset(DEMO_ROWS,"demo"); if(SAVED) { state.run=loadSaved(SAVED); state.decisions=defaultDecisions(state.run);} renderAll(); updateRunStatus(); $("#csv").value=""; $("#upload-status").textContent=""; });
+
+function updateRunStatus(){
+  const st=$("#status"), btn=$("#run"); st.className="status";
+  if (state.sample){ btn.hidden=false; btn.textContent = state.run ? "Run the AI review again" : "Run AI review";
+    st.textContent = state.run && state.run.saved ? "Showing the saved AI run. You can run a fresh review yourself." : state.run ? "" : "Claude will review the grouped ledger. Takes about a minute.";
+  } else { btn.hidden=true;
+    if (STANDALONE){ st.innerHTML = `Showing the saved AI run from ${state.run&&state.run.ranAt?new Date(state.run.ranAt).toLocaleDateString("en-US",{dateStyle:"medium"}):"the benchmark"}. To run a fresh review or analyze your own ledger, use the <a href="${LIVE_URL}">live version on Claude</a> (free Claude sign-in).`; return; }
+    st.textContent = state.run && state.run.saved ? "Showing the saved AI run. Sign in to Claude to run a fresh review or analyze your own ledger." : "AI review runs for viewers signed in to Claude. Sign in to run it.";
+  }
+}
+
+/* ---------- boot ---------- */
+setDataset(DEMO_ROWS,"demo");
+if (SAVED) { try { state.run=loadSaved(SAVED); state.decisions=defaultDecisions(state.run); } catch(e){ state.run=null; } }
+renderAll();
+$("#run").hidden=true;
+
+if (STANDALONE){ const u=$("#upload-box"); if(u) u.innerHTML=`<p class="small" style="margin:0">Analyzing your own ledger needs the AI, which runs in the <a href="${LIVE_URL}">live version on Claude</a>. Upload a CSV there.</p>`; }
+function waitForClaude(ms){ return new Promise(res=>{ const t0=Date.now(); (function poll(){ if (window.claude && typeof window.claude.use==="function") return res(window.claude); if (Date.now()-t0>ms) return res(null); setTimeout(poll,150); })(); }); }
+(async()=>{
+  const c = STANDALONE ? null : await waitForClaude(4000);
+  if (!c){ updateRunStatus(); return; }
+  const [sample, db, downloads] = await Promise.all([c.use("sample").catch(()=>null), c.use("db").catch(()=>null), c.use("downloads").catch(()=>null)]);
+  state.sample=sample; state.db=db; state.downloads=downloads;
+  if (downloads){ $("#dl-memo").hidden=false; $("#dl-csv").hidden=false; }
+  if (!state.run && db){
+    try{ const snap = await Promise.race([db.doc("runs/latest").get(), new Promise((_,rej)=>setTimeout(()=>rej(new Error("timeout")),10000))]);
+      const data = snap && (typeof snap.data==="function" ? snap.data() : snap);
+      if (data && data.json && state.mode==="demo" && !state.run){ const o=JSON.parse(data.json); SAVED=o; state.run=loadSaved(o); state.decisions=defaultDecisions(state.run); renderAll(); }
+    }catch(e){ /* no saved run yet */ }
+  }
+  updateRunStatus();
+})();
+})();
+</script>
+</body>
+</html>

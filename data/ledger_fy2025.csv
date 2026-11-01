@@ -1,0 +1,946 @@
+date,account,type,payee,memo,amount
+2025-01-01,Employee Benefits,OpEx,Medica,Group health premium,6150
+2025-01-01,Rent,OpEx,Brandt Properties LLC,"Rent - shop & yard, 4410 Industrial Pkwy",8500
+2025-01-03,Officer Salaries,OpEx,Dale Brandt,Payroll - Dale Brandt (President) salary,6153.85
+2025-01-03,Office Salaries,OpEx,Karen Brandt,Payroll - Karen Brandt (Office) salary,2000.0
+2025-01-03,Office Salaries,OpEx,Linda Ortiz,Payroll - Linda Ortiz (Office Manager) salary,1865.38
+2025-01-03,Field Labor,COGS,Miguel Santos,Payroll - Miguel Santos (Foreman) salary,2461.54
+2025-01-03,Field Labor,COGS,Tom Lindgren,Payroll - Tom Lindgren (Crew Lead) 56.0 hrs,1344.0
+2025-01-03,Field Labor,COGS,Chris Hall,Payroll - Chris Hall (Laborer) 56.0 hrs,1008.0
+2025-01-03,Field Labor,COGS,Devon Price,Payroll - Devon Price (Laborer) 48.0 hrs,864.0
+2025-01-03,Payroll Taxes,OpEx,EFTPS / MN Revenue,"Employer FICA, FUTA, SUTA",1263.59
+2025-01-03,Dues & Subscriptions,OpEx,Northland Country Club,Monthly dues,800
+2025-01-04,Fuel,COGS,Holiday Stationstores,Fleet fuel,1138.15
+2025-01-05,Revenue - Snow Removal,Revenue,Hartley Townhomes HOA,Seasonal snow contract - monthly,6184.91
+2025-01-05,Revenue - Snow Removal,Revenue,Bayfront Condos HOA,Seasonal snow contract - monthly,6040.35
+2025-01-05,Revenue - Snow Removal,Revenue,Essentia Clinic - Hermantown,Seasonal snow contract - monthly,5519.31
+2025-01-05,Revenue - Snow Removal,Revenue,Hermantown Retail Center,Seasonal snow contract - monthly,5265.08
+2025-01-05,Revenue - Snow Removal,Revenue,St. Luke's Annex,Seasonal snow contract - monthly,5118.37
+2025-01-05,Revenue - Snow Removal,Revenue,Canal Park Lodge,Seasonal snow contract - monthly,5976.9
+2025-01-05,Vehicle Expense,OpEx,Ford Credit,Lease - F-250 crew truck #3,865
+2025-01-05,Vehicle Expense,OpEx,Ford Credit,Lease - F-250 crew truck #4,865
+2025-01-05,Vehicle Expense,OpEx,Ford Credit,Lease - F-250 crew truck #5,865
+2025-01-05,Vehicle Expense,OpEx,Toyota Financial Services,Lease - 2025 Lexus GX 550,1200
+2025-01-07,Advertising & Marketing,OpEx,Google Ads,Search ads,351.85
+2025-01-08,Training & Education,OpEx,Marshall School,Tuition - spring semester,9000
+2025-01-09,Equipment Repairs & Maintenance,COGS,Lakehead Equipment,Mower service,3515.91
+2025-01-10,Insurance,OpEx,SFM Mutual Insurance,Workers comp premium - policy WC-55821,1550
+2025-01-10,Insurance,OpEx,West Bend Insurance,GL & commercial auto - monthly installment,2000
+2025-01-12,Utilities,OpEx,Minnesota Power,Electric - shop,890.29
+2025-01-12,Utilities,OpEx,ComfortSystems,Gas & water - shop,552.52
+2025-01-14,Office Supplies,OpEx,Costco Wholesale,Costco - household items,520
+2025-01-15,Telephone & Internet,OpEx,Verizon Wireless,Company cell plan - 9 lines,544.03
+2025-01-15,Telephone & Internet,OpEx,Spectrum Business,Office internet,189
+2025-01-15,Dues & Subscriptions,OpEx,Duluth Area Chamber of Commerce,Annual membership,650
+2025-01-17,Officer Salaries,OpEx,Dale Brandt,Payroll - Dale Brandt (President) salary,6153.85
+2025-01-17,Office Salaries,OpEx,Karen Brandt,Payroll - Karen Brandt (Office) salary,2000.0
+2025-01-17,Office Salaries,OpEx,Linda Ortiz,Payroll - Linda Ortiz (Office Manager) salary,1865.38
+2025-01-17,Field Labor,COGS,Miguel Santos,Payroll - Miguel Santos (Foreman) salary,2461.54
+2025-01-17,Field Labor,COGS,Tom Lindgren,Payroll - Tom Lindgren (Crew Lead) 64.0 hrs,1536.0
+2025-01-17,Field Labor,COGS,Chris Hall,Payroll - Chris Hall (Laborer) 56.0 hrs,1008.0
+2025-01-17,Field Labor,COGS,Devon Price,Payroll - Devon Price (Laborer) 40.0 hrs,720.0
+2025-01-17,Payroll Taxes,OpEx,EFTPS / MN Revenue,"Employer FICA, FUTA, SUTA",1267.45
+2025-01-18,Fuel,COGS,Holiday Stationstores,Fleet fuel,1039.79
+2025-01-18,Bank & Merchant Fees,OpEx,North Shore Bank,Merchant & service fees,285.77
+2025-01-20,Software & Subscriptions,OpEx,Aspire Software,Field service software,425
+2025-01-20,Software & Subscriptions,OpEx,Intuit QuickBooks,Accounting software,90
+2025-01-20,Office Supplies,OpEx,Amazon,Office supplies,105.15
+2025-01-23,Fuel,COGS,Holiday Stationstores,Fleet fuel,1242.16
+2025-01-25,Accounting Fees,OpEx,Clearwater CPA Group,Monthly bookkeeping & payroll review,800
+2025-01-28,Interest Expense,Other,North Shore Bank,Interest - equipment term loan,1768
+2025-01-28,Depreciation,Other,Internal,Monthly depreciation - fleet & equipment,5650
+2025-01-31,Officer Salaries,OpEx,Dale Brandt,Payroll - Dale Brandt (President) salary,6153.85
+2025-01-31,Office Salaries,OpEx,Karen Brandt,Payroll - Karen Brandt (Office) salary,2000.0
+2025-01-31,Office Salaries,OpEx,Linda Ortiz,Payroll - Linda Ortiz (Office Manager) salary,1865.38
+2025-01-31,Field Labor,COGS,Miguel Santos,Payroll - Miguel Santos (Foreman) salary,2461.54
+2025-01-31,Field Labor,COGS,Tom Lindgren,Payroll - Tom Lindgren (Crew Lead) 56.0 hrs,1344.0
+2025-01-31,Field Labor,COGS,Chris Hall,Payroll - Chris Hall (Laborer) 40.0 hrs,720.0
+2025-01-31,Field Labor,COGS,Devon Price,Payroll - Devon Price (Laborer) 56.0 hrs,1008.0
+2025-01-31,Payroll Taxes,OpEx,EFTPS / MN Revenue,"Employer FICA, FUTA, SUTA",1252.0
+2025-02-01,Employee Benefits,OpEx,Medica,Group health premium,6150
+2025-02-01,Rent,OpEx,Brandt Properties LLC,"Rent - shop & yard, 4410 Industrial Pkwy",8500
+2025-02-01,Dues & Subscriptions,OpEx,MN Nursery & Landscape Association,Annual membership,495
+2025-02-03,Dues & Subscriptions,OpEx,Northland Country Club,Monthly dues,800
+2025-02-05,Revenue - Snow Removal,Revenue,Hartley Townhomes HOA,Seasonal snow contract - monthly,6185.93
+2025-02-05,Revenue - Snow Removal,Revenue,Bayfront Condos HOA,Seasonal snow contract - monthly,5340.64
+2025-02-05,Revenue - Snow Removal,Revenue,Essentia Clinic - Hermantown,Seasonal snow contract - monthly,5311.14
+2025-02-05,Revenue - Snow Removal,Revenue,Hermantown Retail Center,Seasonal snow contract - monthly,6116.82
+2025-02-05,Revenue - Snow Removal,Revenue,St. Luke's Annex,Seasonal snow contract - monthly,6154.15
+2025-02-05,Revenue - Snow Removal,Revenue,Canal Park Lodge,Seasonal snow contract - monthly,5822.5
+2025-02-05,Vehicle Expense,OpEx,Ford Credit,Lease - F-250 crew truck #3,865
+2025-02-05,Vehicle Expense,OpEx,Ford Credit,Lease - F-250 crew truck #4,865
+2025-02-05,Vehicle Expense,OpEx,Ford Credit,Lease - F-250 crew truck #5,865
+2025-02-05,Vehicle Expense,OpEx,Toyota Financial Services,Lease - 2025 Lexus GX 550,1200
+2025-02-07,Advertising & Marketing,OpEx,Google Ads,Search ads,254.38
+2025-02-09,Legal & Professional,OpEx,Arrowhead Legal Services,Contract review - commercial bids,573.06
+2025-02-10,Insurance,OpEx,SFM Mutual Insurance,Workers comp premium - policy WC-55821,1550
+2025-02-10,Insurance,OpEx,West Bend Insurance,GL & commercial auto - monthly installment,2000
+2025-02-11,Travel,OpEx,Delta Air Lines,Client development - MSP-OGG x4,3800
+2025-02-12,Utilities,OpEx,Minnesota Power,Electric - shop,700.56
+2025-02-12,Utilities,OpEx,ComfortSystems,Gas & water - shop,591.49
+2025-02-13,Fuel,COGS,Holiday Stationstores,Fleet fuel,1126.52
+2025-02-14,Officer Salaries,OpEx,Dale Brandt,Payroll - Dale Brandt (President) salary,6153.85
+2025-02-14,Office Salaries,OpEx,Karen Brandt,Payroll - Karen Brandt (Office) salary,2000.0
+2025-02-14,Office Salaries,OpEx,Linda Ortiz,Payroll - Linda Ortiz (Office Manager) salary,1865.38
+2025-02-14,Field Labor,COGS,Miguel Santos,Payroll - Miguel Santos (Foreman) salary,2461.54
+2025-02-14,Field Labor,COGS,Tom Lindgren,Payroll - Tom Lindgren (Crew Lead) 64.0 hrs,1536.0
+2025-02-14,Field Labor,COGS,Chris Hall,Payroll - Chris Hall (Laborer) 40.0 hrs,720.0
+2025-02-14,Field Labor,COGS,Devon Price,Payroll - Devon Price (Laborer) 48.0 hrs,864.0
+2025-02-14,Payroll Taxes,OpEx,EFTPS / MN Revenue,"Employer FICA, FUTA, SUTA",1255.86
+2025-02-14,Office Supplies,OpEx,Costco Wholesale,Costco - household,410
+2025-02-15,Telephone & Internet,OpEx,Verizon Wireless,Company cell plan - 9 lines,534.86
+2025-02-15,Telephone & Internet,OpEx,Spectrum Business,Office internet,189
+2025-02-17,Fuel,COGS,Holiday Stationstores,Fleet fuel,1039.85
+2025-02-18,Fuel,COGS,Holiday Stationstores,Fleet fuel,1284.21
+2025-02-18,Bank & Merchant Fees,OpEx,North Shore Bank,Merchant & service fees,222.91
+2025-02-20,Software & Subscriptions,OpEx,Aspire Software,Field service software,425
+2025-02-20,Software & Subscriptions,OpEx,Intuit QuickBooks,Accounting software,90
+2025-02-22,Equipment Repairs & Maintenance,COGS,Lakehead Equipment,Plow blade repair,3764.44
+2025-02-22,Legal & Professional,OpEx,Lindqvist & Moe PLLC,Litigation - Hansen v. Birchline (retaining wall failure),3200
+2025-02-24,Travel,OpEx,Wailea Beach Resort,Client development - lodging 7 nights,8000
+2025-02-25,Accounting Fees,OpEx,Clearwater CPA Group,Monthly bookkeeping & payroll review,800
+2025-02-25,Office Supplies,OpEx,Amazon,Printer toner,208.45
+2025-02-28,Officer Salaries,OpEx,Dale Brandt,Payroll - Dale Brandt (President) salary,6153.85
+2025-02-28,Office Salaries,OpEx,Karen Brandt,Payroll - Karen Brandt (Office) salary,2000.0
+2025-02-28,Office Salaries,OpEx,Linda Ortiz,Payroll - Linda Ortiz (Office Manager) salary,1865.38
+2025-02-28,Field Labor,COGS,Miguel Santos,Payroll - Miguel Santos (Foreman) salary,2461.54
+2025-02-28,Field Labor,COGS,Tom Lindgren,Payroll - Tom Lindgren (Crew Lead) 72.0 hrs,1728.0
+2025-02-28,Field Labor,COGS,Chris Hall,Payroll - Chris Hall (Laborer) 40.0 hrs,720.0
+2025-02-28,Field Labor,COGS,Devon Price,Payroll - Devon Price (Laborer) 48.0 hrs,864.0
+2025-02-28,Payroll Taxes,OpEx,EFTPS / MN Revenue,"Employer FICA, FUTA, SUTA",1271.32
+2025-02-28,Interest Expense,Other,North Shore Bank,Interest - equipment term loan,1756
+2025-02-28,Depreciation,Other,Internal,Monthly depreciation - fleet & equipment,5650
+2025-03-01,Employee Benefits,OpEx,Medica,Group health premium,6150
+2025-03-01,Rent,OpEx,Brandt Properties LLC,"Rent - shop & yard, 4410 Industrial Pkwy",8500
+2025-03-03,Dues & Subscriptions,OpEx,Northland Country Club,Monthly dues,800
+2025-03-05,Revenue - Snow Removal,Revenue,Hartley Townhomes HOA,Seasonal snow contract - monthly,5752.77
+2025-03-05,Revenue - Snow Removal,Revenue,Bayfront Condos HOA,Seasonal snow contract - monthly,5322.44
+2025-03-05,Revenue - Snow Removal,Revenue,Essentia Clinic - Hermantown,Seasonal snow contract - monthly,5565.22
+2025-03-05,Revenue - Snow Removal,Revenue,Hermantown Retail Center,Seasonal snow contract - monthly,5633.56
+2025-03-05,Revenue - Snow Removal,Revenue,St. Luke's Annex,Seasonal snow contract - monthly,5944.42
+2025-03-05,Revenue - Snow Removal,Revenue,Canal Park Lodge,Seasonal snow contract - monthly,5356.4
+2025-03-05,Fuel,COGS,Holiday Stationstores,Fleet fuel,1318.47
+2025-03-05,Vehicle Expense,OpEx,Ford Credit,Lease - F-250 crew truck #3,865
+2025-03-05,Vehicle Expense,OpEx,Ford Credit,Lease - F-250 crew truck #4,865
+2025-03-05,Vehicle Expense,OpEx,Ford Credit,Lease - F-250 crew truck #5,865
+2025-03-05,Vehicle Expense,OpEx,Toyota Financial Services,Lease - 2025 Lexus GX 550,1200
+2025-03-07,Office Supplies,OpEx,Amazon,Printer toner,174.33
+2025-03-07,Advertising & Marketing,OpEx,Google Ads,Search ads,258.88
+2025-03-10,Insurance,OpEx,SFM Mutual Insurance,Workers comp premium - policy WC-55821,1550
+2025-03-10,Insurance,OpEx,West Bend Insurance,GL & commercial auto - monthly installment,2000
+2025-03-12,Utilities,OpEx,Minnesota Power,Electric - shop,795.99
+2025-03-12,Utilities,OpEx,ComfortSystems,Gas & water - shop,710.33
+2025-03-12,Training & Education,OpEx,Hennepin Technical College,Pesticide applicator certification - crew,1350
+2025-03-14,Officer Salaries,OpEx,Dale Brandt,Payroll - Dale Brandt (President) salary,6153.85
+2025-03-14,Office Salaries,OpEx,Karen Brandt,Payroll - Karen Brandt (Office) salary,2000.0
+2025-03-14,Office Salaries,OpEx,Linda Ortiz,Payroll - Linda Ortiz (Office Manager) salary,1865.38
+2025-03-14,Field Labor,COGS,Miguel Santos,Payroll - Miguel Santos (Foreman) salary,2461.54
+2025-03-14,Field Labor,COGS,Tom Lindgren,Payroll - Tom Lindgren (Crew Lead) 56.0 hrs,1344.0
+2025-03-14,Field Labor,COGS,Chris Hall,Payroll - Chris Hall (Laborer) 56.0 hrs,1008.0
+2025-03-14,Field Labor,COGS,Devon Price,Payroll - Devon Price (Laborer) 40.0 hrs,720.0
+2025-03-14,Payroll Taxes,OpEx,EFTPS / MN Revenue,"Employer FICA, FUTA, SUTA",1252.0
+2025-03-14,Office Supplies,OpEx,Costco Wholesale,Costco - home groceries & household,610
+2025-03-15,Telephone & Internet,OpEx,Verizon Wireless,Company cell plan - 9 lines,526.98
+2025-03-15,Telephone & Internet,OpEx,Spectrum Business,Office internet,189
+2025-03-18,Bank & Merchant Fees,OpEx,North Shore Bank,Merchant & service fees,255.66
+2025-03-18,Advertising & Marketing,OpEx,Duluth Home & Garden Show,Booth - spring show,1450
+2025-03-19,Fuel,COGS,Holiday Stationstores,Fleet fuel,1216.42
+2025-03-19,Fuel,COGS,Holiday Stationstores,Fleet fuel,1104.69
+2025-03-20,Software & Subscriptions,OpEx,Aspire Software,Field service software,425
+2025-03-20,Software & Subscriptions,OpEx,Intuit QuickBooks,Accounting software,90
+2025-03-20,Training & Education,OpEx,ICPI,Concrete paver installer certification - M. Santos,1200
+2025-03-22,Legal & Professional,OpEx,Lindqvist & Moe PLLC,Litigation - Hansen v. Birchline (retaining wall failure),4100
+2025-03-23,Equipment Repairs & Maintenance,COGS,Lakehead Equipment,Plow blade repair,3355.5
+2025-03-25,Accounting Fees,OpEx,Clearwater CPA Group,Monthly bookkeeping & payroll review,800
+2025-03-28,Officer Salaries,OpEx,Dale Brandt,Payroll - Dale Brandt (President) salary,6153.85
+2025-03-28,Office Salaries,OpEx,Karen Brandt,Payroll - Karen Brandt (Office) salary,2000.0
+2025-03-28,Office Salaries,OpEx,Linda Ortiz,Payroll - Linda Ortiz (Office Manager) salary,1865.38
+2025-03-28,Field Labor,COGS,Miguel Santos,Payroll - Miguel Santos (Foreman) salary,2461.54
+2025-03-28,Field Labor,COGS,Tom Lindgren,Payroll - Tom Lindgren (Crew Lead) 72.0 hrs,1728.0
+2025-03-28,Field Labor,COGS,Chris Hall,Payroll - Chris Hall (Laborer) 40.0 hrs,720.0
+2025-03-28,Field Labor,COGS,Devon Price,Payroll - Devon Price (Laborer) 48.0 hrs,864.0
+2025-03-28,Payroll Taxes,OpEx,EFTPS / MN Revenue,"Employer FICA, FUTA, SUTA",1271.32
+2025-03-28,Interest Expense,Other,North Shore Bank,Interest - equipment term loan,1744
+2025-03-28,Depreciation,Other,Internal,Monthly depreciation - fleet & equipment,5650
+2025-04-01,Revenue - Maintenance Contracts,Revenue,Hartley Townhomes HOA,Maintenance contract - Apr 2025,6016.85
+2025-04-01,Revenue - Maintenance Contracts,Revenue,Bayfront Condos HOA,Maintenance contract - Apr 2025,7361.56
+2025-04-01,Revenue - Maintenance Contracts,Revenue,Essentia Clinic - Hermantown,Maintenance contract - Apr 2025,5037.39
+2025-04-01,Revenue - Maintenance Contracts,Revenue,Canal Park Lodge,Maintenance contract - Apr 2025,3962.17
+2025-04-01,Revenue - Maintenance Contracts,Revenue,Hermantown Retail Center,Maintenance contract - Apr 2025,4369.33
+2025-04-01,Revenue - Maintenance Contracts,Revenue,St. Luke's Annex,Maintenance contract - Apr 2025,5523.5
+2025-04-01,Revenue - Maintenance Contracts,Revenue,UMD Facilities,Maintenance contract - Apr 2025,8726.64
+2025-04-01,Revenue - Maintenance Contracts,Revenue,Residential maintenance plans (batch),Maintenance contract - Apr 2025,19303.67
+2025-04-01,Materials & Plants,COGS,Home Depot,Job materials,775.09
+2025-04-01,Employee Benefits,OpEx,Medica,Group health premium,6150
+2025-04-01,Rent,OpEx,Brandt Properties LLC,"Rent - shop & yard, 4410 Industrial Pkwy",8500
+2025-04-02,Materials & Plants,COGS,Northland Rain Bird Supply,Irrigation parts,1720.97
+2025-04-03,Materials & Plants,COGS,Hedberg Landscape Supply,"Pavers, block, aggregate",4856.49
+2025-04-03,Dues & Subscriptions,OpEx,Northland Country Club,Monthly dues,800
+2025-04-04,Revenue - Design & Installation,Revenue,Canal Park Lodge,Landscape install - final invoice,8542.62
+2025-04-05,Vehicle Expense,OpEx,Ford Credit,Lease - F-250 crew truck #3,865
+2025-04-05,Vehicle Expense,OpEx,Ford Credit,Lease - F-250 crew truck #4,865
+2025-04-05,Vehicle Expense,OpEx,Ford Credit,Lease - F-250 crew truck #5,865
+2025-04-05,Vehicle Expense,OpEx,Toyota Financial Services,Lease - 2025 Lexus GX 550,1200
+2025-04-06,Revenue - Design & Installation,Revenue,Woodland Residence - Haugen,Landscape install - final invoice,11784.38
+2025-04-06,Revenue - Design & Installation,Revenue,UMD Facilities,Paver walkway & plantings,13135.51
+2025-04-07,Fuel,COGS,Holiday Stationstores,Fleet fuel,1323.74
+2025-04-07,Advertising & Marketing,OpEx,Google Ads,Search ads,1091.88
+2025-04-08,Materials & Plants,COGS,Duluth Ready Mix,Concrete & base,977.19
+2025-04-09,Meals,OpEx,Jimmy John's,Crew lunch - job site,159.14
+2025-04-10,Insurance,OpEx,SFM Mutual Insurance,Workers comp premium - policy WC-55821,1550
+2025-04-10,Insurance,OpEx,West Bend Insurance,GL & commercial auto - monthly installment,2000
+2025-04-11,Revenue - Design & Installation,Revenue,Hermantown Retail Center,Paver walkway & plantings,13836.49
+2025-04-11,Revenue - Design & Installation,Revenue,Hermantown Retail Center,Patio & retaining wall - progress billing,8862.18
+2025-04-11,Materials & Plants,COGS,Duluth Ready Mix,Concrete & base,1140.57
+2025-04-11,Officer Salaries,OpEx,Dale Brandt,Payroll - Dale Brandt (President) salary,6153.85
+2025-04-11,Office Salaries,OpEx,Karen Brandt,Payroll - Karen Brandt (Office) salary,2000.0
+2025-04-11,Office Salaries,OpEx,Linda Ortiz,Payroll - Linda Ortiz (Office Manager) salary,1865.38
+2025-04-11,Field Labor,COGS,Miguel Santos,Payroll - Miguel Santos (Foreman) salary,2461.54
+2025-04-11,Field Labor,COGS,Tom Lindgren,Payroll - Tom Lindgren (Crew Lead) 80.0 hrs,1920.0
+2025-04-11,Field Labor,COGS,Jake Brandt,Payroll - Jake Brandt (Crew Lead) 80.0 hrs,960.0
+2025-04-11,Field Labor,COGS,Ana Reyes,Payroll - Ana Reyes (Crew Lead) 80.0 hrs,1880.0
+2025-04-11,Field Labor,COGS,Chris Hall,Payroll - Chris Hall (Laborer) 72.0 hrs,1296.0
+2025-04-11,Field Labor,COGS,Devon Price,Payroll - Devon Price (Laborer) 72.0 hrs,1296.0
+2025-04-11,Field Labor,COGS,Sam Kuehn,Payroll - Sam Kuehn (Laborer) 72.0 hrs,1296.0
+2025-04-11,Field Labor,COGS,Eli Novak,Payroll - Eli Novak (Laborer) 76.0 hrs,1368.0
+2025-04-11,Field Labor,COGS,Marcus Bell,Payroll - Marcus Bell (Laborer) 80.0 hrs,1440.0
+2025-04-11,Field Labor,COGS,Ty Larsen,Payroll - Ty Larsen (Laborer) 80.0 hrs,1440.0
+2025-04-11,Payroll Taxes,OpEx,EFTPS / MN Revenue,"Employer FICA, FUTA, SUTA",2042.83
+2025-04-12,Utilities,OpEx,Minnesota Power,Electric - shop,491.02
+2025-04-12,Utilities,OpEx,ComfortSystems,Gas & water - shop,248.27
+2025-04-13,Materials & Plants,COGS,Northland Rain Bird Supply,Irrigation parts,1422.65
+2025-04-13,Materials & Plants,COGS,Home Depot,Job materials,718.91
+2025-04-14,Materials & Plants,COGS,Home Depot,Job materials,997.77
+2025-04-14,Office Supplies,OpEx,Amazon,Printer toner,214.74
+2025-04-14,Office Supplies,OpEx,Costco Wholesale,Costco - household items,480
+2025-04-15,Subcontractors,COGS,Arrowhead Electric,Sub - specialty work,6970.59
+2025-04-15,Telephone & Internet,OpEx,Verizon Wireless,Company cell plan - 9 lines,547.92
+2025-04-15,Telephone & Internet,OpEx,Spectrum Business,Office internet,189
+2025-04-16,Materials & Plants,COGS,Bailey Nurseries,"Trees, shrubs & perennials",2067.51
+2025-04-16,Other Income,Other Income,IRS - US Treasury,Employee Retention Credit refund - Q3 2021,46000
+2025-04-17,Materials & Plants,COGS,Bailey Nurseries,"Trees, shrubs & perennials",2182.03
+2025-04-17,Equipment Repairs & Maintenance,COGS,Lakehead Equipment,Mower service,3831.07
+2025-04-18,Bank & Merchant Fees,OpEx,North Shore Bank,Merchant & service fees,256.4
+2025-04-18,Advertising & Marketing,OpEx,Duluth Home & Garden Show,Booth - spring show,1450
+2025-04-19,Revenue - Design & Installation,Revenue,Glen Avon Residence - Strand,Landscape install - final invoice,10603.24
+2025-04-20,Dump & Disposal Fees,COGS,WLSSD Yard Waste Site,Green waste disposal,1163.22
+2025-04-20,Software & Subscriptions,OpEx,Aspire Software,Field service software,425
+2025-04-20,Software & Subscriptions,OpEx,Intuit QuickBooks,Accounting software,90
+2025-04-21,Revenue - Design & Installation,Revenue,Lester River Residence - Nelson,Landscape install - final invoice,11561.93
+2025-04-21,Fuel,COGS,Holiday Stationstores,Fleet fuel,1504.04
+2025-04-22,Revenue - Design & Installation,Revenue,Bayfront Condos HOA,Paver walkway & plantings,12873.65
+2025-04-22,Materials & Plants,COGS,Bailey Nurseries,"Trees, shrubs & perennials",1940.89
+2025-04-22,Legal & Professional,OpEx,Lindqvist & Moe PLLC,Litigation - Hansen v. Birchline (retaining wall failure),2900
+2025-04-23,Materials & Plants,COGS,Northland Rain Bird Supply,Irrigation parts,1781.56
+2025-04-23,Materials & Plants,COGS,Home Depot,Job materials,892.52
+2025-04-23,Materials & Plants,COGS,Duluth Ready Mix,Concrete & base,939.18
+2025-04-24,Materials & Plants,COGS,Hedberg Landscape Supply,"Pavers, block, aggregate",6049.96
+2025-04-24,Fuel,COGS,Holiday Stationstores,Fleet fuel,1282.08
+2025-04-25,Officer Salaries,OpEx,Dale Brandt,Payroll - Dale Brandt (President) salary,6153.85
+2025-04-25,Office Salaries,OpEx,Karen Brandt,Payroll - Karen Brandt (Office) salary,2000.0
+2025-04-25,Office Salaries,OpEx,Linda Ortiz,Payroll - Linda Ortiz (Office Manager) salary,1865.38
+2025-04-25,Field Labor,COGS,Miguel Santos,Payroll - Miguel Santos (Foreman) salary,2461.54
+2025-04-25,Field Labor,COGS,Tom Lindgren,Payroll - Tom Lindgren (Crew Lead) 80.0 hrs,1920.0
+2025-04-25,Field Labor,COGS,Jake Brandt,Payroll - Jake Brandt (Crew Lead) 80.0 hrs,960.0
+2025-04-25,Field Labor,COGS,Ana Reyes,Payroll - Ana Reyes (Crew Lead) 80.0 hrs,1880.0
+2025-04-25,Field Labor,COGS,Chris Hall,Payroll - Chris Hall (Laborer) 80.0 hrs,1440.0
+2025-04-25,Field Labor,COGS,Devon Price,Payroll - Devon Price (Laborer) 84.0 hrs,1512.0
+2025-04-25,Field Labor,COGS,Sam Kuehn,Payroll - Sam Kuehn (Laborer) 80.0 hrs,1440.0
+2025-04-25,Field Labor,COGS,Eli Novak,Payroll - Eli Novak (Laborer) 76.0 hrs,1368.0
+2025-04-25,Field Labor,COGS,Marcus Bell,Payroll - Marcus Bell (Laborer) 72.0 hrs,1296.0
+2025-04-25,Field Labor,COGS,Ty Larsen,Payroll - Ty Larsen (Laborer) 80.0 hrs,1440.0
+2025-04-25,Payroll Taxes,OpEx,EFTPS / MN Revenue,"Employer FICA, FUTA, SUTA",2071.81
+2025-04-25,Accounting Fees,OpEx,Clearwater CPA Group,Monthly bookkeeping & payroll review,800
+2025-04-26,Materials & Plants,COGS,Hedberg Landscape Supply,"Pavers, block, aggregate",3354.57
+2025-04-28,Materials & Plants,COGS,Northland Rain Bird Supply,Irrigation parts,1491.86
+2025-04-28,Fuel,COGS,Holiday Stationstores,Fleet fuel,1531.97
+2025-04-28,Interest Expense,Other,North Shore Bank,Interest - equipment term loan,1732
+2025-04-28,Depreciation,Other,Internal,Monthly depreciation - fleet & equipment,5650
+2025-04-28,Meals,OpEx,Duluth Grill,Crew lunch - job site,137.99
+2025-05-01,Revenue - Maintenance Contracts,Revenue,Hartley Townhomes HOA,Maintenance contract - May 2025,6077.95
+2025-05-01,Revenue - Maintenance Contracts,Revenue,Bayfront Condos HOA,Maintenance contract - May 2025,7313.74
+2025-05-01,Revenue - Maintenance Contracts,Revenue,Essentia Clinic - Hermantown,Maintenance contract - May 2025,5162.6
+2025-05-01,Revenue - Maintenance Contracts,Revenue,Canal Park Lodge,Maintenance contract - May 2025,3858.37
+2025-05-01,Revenue - Maintenance Contracts,Revenue,Hermantown Retail Center,Maintenance contract - May 2025,4342.1
+2025-05-01,Revenue - Maintenance Contracts,Revenue,St. Luke's Annex,Maintenance contract - May 2025,5561.75
+2025-05-01,Revenue - Maintenance Contracts,Revenue,UMD Facilities,Maintenance contract - May 2025,8763.23
+2025-05-01,Revenue - Maintenance Contracts,Revenue,Residential maintenance plans (batch),Maintenance contract - May 2025,18860.95
+2025-05-01,Employee Benefits,OpEx,Medica,Group health premium,6150
+2025-05-01,Rent,OpEx,Brandt Properties LLC,"Rent - shop & yard, 4410 Industrial Pkwy",8500
+2025-05-03,Dues & Subscriptions,OpEx,Northland Country Club,Monthly dues,800
+2025-05-04,Revenue - Design & Installation,Revenue,Congdon Residence - Pierce,Landscape install - final invoice,17675.42
+2025-05-04,Materials & Plants,COGS,Northland Rain Bird Supply,Irrigation parts,1817.37
+2025-05-04,Materials & Plants,COGS,Home Depot,Job materials,1871.23
+2025-05-04,Meals,OpEx,Jimmy John's,Crew lunch - job site,209.26
+2025-05-05,Fuel,COGS,Holiday Stationstores,Fleet fuel,1371.47
+2025-05-05,Vehicle Expense,OpEx,Ford Credit,Lease - F-250 crew truck #3,865
+2025-05-05,Vehicle Expense,OpEx,Ford Credit,Lease - F-250 crew truck #4,865
+2025-05-05,Vehicle Expense,OpEx,Ford Credit,Lease - F-250 crew truck #5,865
+2025-05-05,Vehicle Expense,OpEx,Toyota Financial Services,Lease - 2025 Lexus GX 550,1200
+2025-05-06,Revenue - Design & Installation,Revenue,Congdon Residence - Pierce,Irrigation install,18777.99
+2025-05-06,Materials & Plants,COGS,Duluth Ready Mix,Concrete & base,2813.35
+2025-05-07,Materials & Plants,COGS,Home Depot,Job materials,2333.16
+2025-05-07,Advertising & Marketing,OpEx,Google Ads,Search ads,850.18
+2025-05-07,Meals,OpEx,Duluth Grill,Crew lunch - job site,235.79
+2025-05-09,Revenue - Design & Installation,Revenue,Hermantown Retail Center,Design-build - progress billing,47142.83
+2025-05-09,Revenue - Design & Installation,Revenue,Lakeside Residence - Olson,Design-build - progress billing,349.36
+2025-05-09,Officer Salaries,OpEx,Dale Brandt,Payroll - Dale Brandt (President) salary,6153.85
+2025-05-09,Office Salaries,OpEx,Karen Brandt,Payroll - Karen Brandt (Office) salary,2000.0
+2025-05-09,Office Salaries,OpEx,Linda Ortiz,Payroll - Linda Ortiz (Office Manager) salary,1865.38
+2025-05-09,Field Labor,COGS,Miguel Santos,Payroll - Miguel Santos (Foreman) salary,2461.54
+2025-05-09,Field Labor,COGS,Tom Lindgren,Payroll - Tom Lindgren (Crew Lead) 80.0 hrs,1920.0
+2025-05-09,Field Labor,COGS,Jake Brandt,Payroll - Jake Brandt (Crew Lead) 80.0 hrs,960.0
+2025-05-09,Field Labor,COGS,Ana Reyes,Payroll - Ana Reyes (Crew Lead) 80.0 hrs,1880.0
+2025-05-09,Field Labor,COGS,Chris Hall,Payroll - Chris Hall (Laborer) 80.0 hrs,1440.0
+2025-05-09,Field Labor,COGS,Devon Price,Payroll - Devon Price (Laborer) 76.0 hrs,1368.0
+2025-05-09,Field Labor,COGS,Sam Kuehn,Payroll - Sam Kuehn (Laborer) 80.0 hrs,1440.0
+2025-05-09,Field Labor,COGS,Eli Novak,Payroll - Eli Novak (Laborer) 80.0 hrs,1440.0
+2025-05-09,Field Labor,COGS,Marcus Bell,Payroll - Marcus Bell (Laborer) 76.0 hrs,1368.0
+2025-05-09,Field Labor,COGS,Ty Larsen,Payroll - Ty Larsen (Laborer) 76.0 hrs,1368.0
+2025-05-09,Payroll Taxes,OpEx,EFTPS / MN Revenue,"Employer FICA, FUTA, SUTA",2066.01
+2025-05-09,Legal & Professional,OpEx,Arrowhead Legal Services,Contract review - commercial bids,622.29
+2025-05-10,Materials & Plants,COGS,Hedberg Landscape Supply,"Pavers, block, aggregate",10989.56
+2025-05-10,Materials & Plants,COGS,Bailey Nurseries,"Trees, shrubs & perennials",5368.27
+2025-05-10,Fuel,COGS,Holiday Stationstores,Fleet fuel,1629.67
+2025-05-10,Insurance,OpEx,SFM Mutual Insurance,Workers comp premium - policy WC-55821,1550
+2025-05-10,Insurance,OpEx,West Bend Insurance,GL & commercial auto - monthly installment,2000
+2025-05-11,Revenue - Design & Installation,Revenue,Hunters Park Residence - Moe,Patio & retaining wall - progress billing,15108.17
+2025-05-12,Materials & Plants,COGS,Northland Rain Bird Supply,Irrigation parts,2959.83
+2025-05-12,Materials & Plants,COGS,Duluth Ready Mix,Concrete & base,2573.5
+2025-05-12,Utilities,OpEx,Minnesota Power,Electric - shop,587.69
+2025-05-12,Utilities,OpEx,ComfortSystems,Gas & water - shop,273.25
+2025-05-14,Materials & Plants,COGS,Hedberg Landscape Supply,"Pavers, block, aggregate",12239.94
+2025-05-14,Office Supplies,OpEx,Costco Wholesale,Costco - patio furniture (home),560
+2025-05-15,Materials & Plants,COGS,Bailey Nurseries,"Trees, shrubs & perennials",4208.27
+2025-05-15,Materials & Plants,COGS,Duluth Ready Mix,Concrete & base,2056.67
+2025-05-15,Subcontractors,COGS,North Shore Masonry,Sub - specialty work,8559.01
+2025-05-15,Telephone & Internet,OpEx,Verizon Wireless,Company cell plan - 9 lines,545.78
+2025-05-15,Telephone & Internet,OpEx,Spectrum Business,Office internet,189
+2025-05-16,Revenue - Design & Installation,Revenue,Duluth Pack Store,Paver walkway & plantings,61780.87
+2025-05-17,Fuel,COGS,Holiday Stationstores,Fleet fuel,1229.06
+2025-05-17,Equipment Repairs & Maintenance,COGS,Lakehead Equipment,Plow blade repair,3438.06
+2025-05-18,Bank & Merchant Fees,OpEx,North Shore Bank,Merchant & service fees,232.88
+2025-05-19,Materials & Plants,COGS,Northland Rain Bird Supply,Irrigation parts,2904.58
+2025-05-20,Revenue - Design & Installation,Revenue,Hermantown Retail Center,Design-build - progress billing,21565.37
+2025-05-20,Dump & Disposal Fees,COGS,WLSSD Yard Waste Site,Green waste disposal,1126.21
+2025-05-20,Software & Subscriptions,OpEx,Aspire Software,Field service software,425
+2025-05-20,Software & Subscriptions,OpEx,Intuit QuickBooks,Accounting software,90
+2025-05-21,Office Supplies,OpEx,Amazon,Printer toner,151.35
+2025-05-22,Legal & Professional,OpEx,Lindqvist & Moe PLLC,Litigation - Hansen v. Birchline (retaining wall failure),4300
+2025-05-23,Officer Salaries,OpEx,Dale Brandt,Payroll - Dale Brandt (President) salary,6153.85
+2025-05-23,Office Salaries,OpEx,Karen Brandt,Payroll - Karen Brandt (Office) salary,2000.0
+2025-05-23,Office Salaries,OpEx,Linda Ortiz,Payroll - Linda Ortiz (Office Manager) salary,1865.38
+2025-05-23,Field Labor,COGS,Miguel Santos,Payroll - Miguel Santos (Foreman) salary,2461.54
+2025-05-23,Field Labor,COGS,Tom Lindgren,Payroll - Tom Lindgren (Crew Lead) 80.0 hrs,1920.0
+2025-05-23,Field Labor,COGS,Jake Brandt,Payroll - Jake Brandt (Crew Lead) 80.0 hrs,960.0
+2025-05-23,Field Labor,COGS,Ana Reyes,Payroll - Ana Reyes (Crew Lead) 80.0 hrs,1880.0
+2025-05-23,Field Labor,COGS,Chris Hall,Payroll - Chris Hall (Laborer) 80.0 hrs,1440.0
+2025-05-23,Field Labor,COGS,Devon Price,Payroll - Devon Price (Laborer) 76.0 hrs,1368.0
+2025-05-23,Field Labor,COGS,Sam Kuehn,Payroll - Sam Kuehn (Laborer) 84.0 hrs,1512.0
+2025-05-23,Field Labor,COGS,Eli Novak,Payroll - Eli Novak (Laborer) 76.0 hrs,1368.0
+2025-05-23,Field Labor,COGS,Marcus Bell,Payroll - Marcus Bell (Laborer) 72.0 hrs,1296.0
+2025-05-23,Field Labor,COGS,Ty Larsen,Payroll - Ty Larsen (Laborer) 84.0 hrs,1512.0
+2025-05-23,Payroll Taxes,OpEx,EFTPS / MN Revenue,"Employer FICA, FUTA, SUTA",2071.81
+2025-05-25,Materials & Plants,COGS,Bailey Nurseries,"Trees, shrubs & perennials",5984.51
+2025-05-25,Accounting Fees,OpEx,Clearwater CPA Group,Monthly bookkeeping & payroll review,800
+2025-05-26,Fuel,COGS,Holiday Stationstores,Fleet fuel,1700.61
+2025-05-28,Interest Expense,Other,North Shore Bank,Interest - equipment term loan,1720
+2025-05-28,Depreciation,Other,Internal,Monthly depreciation - fleet & equipment,5650
+2025-06-01,Revenue - Maintenance Contracts,Revenue,Hartley Townhomes HOA,Maintenance contract - Jun 2025,6255.3
+2025-06-01,Revenue - Maintenance Contracts,Revenue,Bayfront Condos HOA,Maintenance contract - Jun 2025,7222.91
+2025-06-01,Revenue - Maintenance Contracts,Revenue,Essentia Clinic - Hermantown,Maintenance contract - Jun 2025,4975.69
+2025-06-01,Revenue - Maintenance Contracts,Revenue,Canal Park Lodge,Maintenance contract - Jun 2025,3999.97
+2025-06-01,Revenue - Maintenance Contracts,Revenue,Hermantown Retail Center,Maintenance contract - Jun 2025,4256.63
+2025-06-01,Revenue - Maintenance Contracts,Revenue,St. Luke's Annex,Maintenance contract - Jun 2025,5731.91
+2025-06-01,Revenue - Maintenance Contracts,Revenue,UMD Facilities,Maintenance contract - Jun 2025,8916.02
+2025-06-01,Revenue - Maintenance Contracts,Revenue,Residential maintenance plans (batch),Maintenance contract - Jun 2025,19012.08
+2025-06-01,Employee Benefits,OpEx,Medica,Group health premium,6150
+2025-06-01,Rent,OpEx,Brandt Properties LLC,"Rent - shop & yard, 4410 Industrial Pkwy",8500
+2025-06-01,Meals,OpEx,Jimmy John's,Crew lunch - job site,216.26
+2025-06-02,Revenue - Design & Installation,Revenue,Bayfront Condos HOA,Design-build - progress billing,35004.66
+2025-06-03,Dues & Subscriptions,OpEx,Northland Country Club,Monthly dues,800
+2025-06-04,Fuel,COGS,Holiday Stationstores,Fleet fuel,1635.26
+2025-06-05,Vehicle Expense,OpEx,Ford Credit,Lease - F-250 crew truck #3,865
+2025-06-05,Vehicle Expense,OpEx,Ford Credit,Lease - F-250 crew truck #4,865
+2025-06-05,Vehicle Expense,OpEx,Ford Credit,Lease - F-250 crew truck #5,865
+2025-06-05,Vehicle Expense,OpEx,Toyota Financial Services,Lease - 2025 Lexus GX 550,1200
+2025-06-06,Officer Salaries,OpEx,Dale Brandt,Payroll - Dale Brandt (President) salary,6153.85
+2025-06-06,Office Salaries,OpEx,Karen Brandt,Payroll - Karen Brandt (Office) salary,2000.0
+2025-06-06,Office Salaries,OpEx,Linda Ortiz,Payroll - Linda Ortiz (Office Manager) salary,1865.38
+2025-06-06,Field Labor,COGS,Miguel Santos,Payroll - Miguel Santos (Foreman) salary,2461.54
+2025-06-06,Field Labor,COGS,Tom Lindgren,Payroll - Tom Lindgren (Crew Lead) 80.0 hrs,1920.0
+2025-06-06,Field Labor,COGS,Jake Brandt,Payroll - Jake Brandt (Crew Lead) 80.0 hrs,960.0
+2025-06-06,Field Labor,COGS,Ana Reyes,Payroll - Ana Reyes (Crew Lead) 80.0 hrs,1880.0
+2025-06-06,Field Labor,COGS,Chris Hall,Payroll - Chris Hall (Laborer) 80.0 hrs,1440.0
+2025-06-06,Field Labor,COGS,Devon Price,Payroll - Devon Price (Laborer) 76.0 hrs,1368.0
+2025-06-06,Field Labor,COGS,Sam Kuehn,Payroll - Sam Kuehn (Laborer) 76.0 hrs,1368.0
+2025-06-06,Field Labor,COGS,Eli Novak,Payroll - Eli Novak (Laborer) 76.0 hrs,1368.0
+2025-06-06,Field Labor,COGS,Marcus Bell,Payroll - Marcus Bell (Laborer) 80.0 hrs,1440.0
+2025-06-06,Field Labor,COGS,Ty Larsen,Payroll - Ty Larsen (Laborer) 80.0 hrs,1440.0
+2025-06-06,Payroll Taxes,OpEx,EFTPS / MN Revenue,"Employer FICA, FUTA, SUTA",2066.01
+2025-06-07,Materials & Plants,COGS,Bailey Nurseries,"Trees, shrubs & perennials",5857.03
+2025-06-07,Advertising & Marketing,OpEx,Google Ads,Search ads,835.88
+2025-06-08,Revenue - Design & Installation,Revenue,St. Luke's Annex,Landscape install - final invoice,42408.16
+2025-06-08,Revenue - Design & Installation,Revenue,Chester Park Residence - Dahl,Design-build - progress billing,31655.96
+2025-06-08,Revenue - Design & Installation,Revenue,Hartley Townhomes HOA,Design-build - progress billing,22121.77
+2025-06-09,Materials & Plants,COGS,Hedberg Landscape Supply,"Pavers, block, aggregate",7728.36
+2025-06-09,Materials & Plants,COGS,Duluth Ready Mix,Concrete & base,2908.75
+2025-06-10,Materials & Plants,COGS,Home Depot,Job materials,1531.15
+2025-06-10,Insurance,OpEx,SFM Mutual Insurance,Workers comp premium - policy WC-55821,1550
+2025-06-10,Insurance,OpEx,West Bend Insurance,GL & commercial auto - monthly installment,2000
+2025-06-10,Legal & Professional,OpEx,Lindqvist & Moe PLLC,"Settlement payment - Hansen v. Birchline, full & final",38000
+2025-06-11,Materials & Plants,COGS,Hedberg Landscape Supply,"Pavers, block, aggregate",7883.18
+2025-06-11,Fuel,COGS,Holiday Stationstores,Fleet fuel,1679.13
+2025-06-12,Utilities,OpEx,Minnesota Power,Electric - shop,478.63
+2025-06-12,Utilities,OpEx,ComfortSystems,Gas & water - shop,269.89
+2025-06-14,Materials & Plants,COGS,Home Depot,Job materials,2301.32
+2025-06-14,Office Supplies,OpEx,Costco Wholesale,Costco - household,700
+2025-06-15,Subcontractors,COGS,North Shore Masonry,Sub - specialty work,7855.15
+2025-06-15,Telephone & Internet,OpEx,Verizon Wireless,Company cell plan - 9 lines,536.69
+2025-06-15,Telephone & Internet,OpEx,Spectrum Business,Office internet,189
+2025-06-16,Fuel,COGS,Holiday Stationstores,Fleet fuel,1712.32
+2025-06-17,Meals,OpEx,Duluth Grill,Crew lunch - job site,199.35
+2025-06-18,Revenue - Design & Installation,Revenue,Lakeside Residence - Olson,Design-build - progress billing,21080.52
+2025-06-18,Materials & Plants,COGS,Duluth Ready Mix,Concrete & base,2768.24
+2025-06-18,Bank & Merchant Fees,OpEx,North Shore Bank,Merchant & service fees,293.06
+2025-06-19,Revenue - Design & Installation,Revenue,Lakeside Residence - Olson,Paver walkway & plantings,17255.93
+2025-06-19,Materials & Plants,COGS,Bailey Nurseries,"Trees, shrubs & perennials",5851.82
+2025-06-20,Dump & Disposal Fees,COGS,WLSSD Yard Waste Site,Green waste disposal,1313.94
+2025-06-20,Officer Salaries,OpEx,Dale Brandt,Payroll - Dale Brandt (President) salary,6153.85
+2025-06-20,Office Salaries,OpEx,Karen Brandt,Payroll - Karen Brandt (Office) salary,2000.0
+2025-06-20,Office Salaries,OpEx,Linda Ortiz,Payroll - Linda Ortiz (Office Manager) salary,1865.38
+2025-06-20,Field Labor,COGS,Miguel Santos,Payroll - Miguel Santos (Foreman) salary,2461.54
+2025-06-20,Field Labor,COGS,Tom Lindgren,Payroll - Tom Lindgren (Crew Lead) 80.0 hrs,1920.0
+2025-06-20,Field Labor,COGS,Jake Brandt,Payroll - Jake Brandt (Crew Lead) 80.0 hrs,960.0
+2025-06-20,Field Labor,COGS,Ana Reyes,Payroll - Ana Reyes (Crew Lead) 80.0 hrs,1880.0
+2025-06-20,Field Labor,COGS,Chris Hall,Payroll - Chris Hall (Laborer) 76.0 hrs,1368.0
+2025-06-20,Field Labor,COGS,Devon Price,Payroll - Devon Price (Laborer) 80.0 hrs,1440.0
+2025-06-20,Field Labor,COGS,Sam Kuehn,Payroll - Sam Kuehn (Laborer) 76.0 hrs,1368.0
+2025-06-20,Field Labor,COGS,Eli Novak,Payroll - Eli Novak (Laborer) 80.0 hrs,1440.0
+2025-06-20,Field Labor,COGS,Marcus Bell,Payroll - Marcus Bell (Laborer) 80.0 hrs,1440.0
+2025-06-20,Field Labor,COGS,Ty Larsen,Payroll - Ty Larsen (Laborer) 84.0 hrs,1512.0
+2025-06-20,Payroll Taxes,OpEx,EFTPS / MN Revenue,"Employer FICA, FUTA, SUTA",2077.61
+2025-06-20,Software & Subscriptions,OpEx,Aspire Software,Field service software,425
+2025-06-20,Software & Subscriptions,OpEx,Intuit QuickBooks,Accounting software,90
+2025-06-21,Revenue - Design & Installation,Revenue,Park Point Residence - Kowalski,Landscape install - final invoice,24273.01
+2025-06-21,Materials & Plants,COGS,Bailey Nurseries,"Trees, shrubs & perennials",5352.88
+2025-06-21,Materials & Plants,COGS,Northland Rain Bird Supply,Irrigation parts,1965.0
+2025-06-21,Materials & Plants,COGS,Duluth Ready Mix,Concrete & base,1938.33
+2025-06-21,Fuel,COGS,Holiday Stationstores,Fleet fuel,1663.07
+2025-06-22,Materials & Plants,COGS,Hedberg Landscape Supply,"Pavers, block, aggregate",13003.11
+2025-06-23,Materials & Plants,COGS,Duluth Ready Mix,Concrete & base,3136.4
+2025-06-25,Accounting Fees,OpEx,Clearwater CPA Group,Monthly bookkeeping & payroll review,800
+2025-06-26,Materials & Plants,COGS,Northland Rain Bird Supply,Irrigation parts,1973.75
+2025-06-26,Office Supplies,OpEx,Amazon,Printer toner,131.58
+2025-06-27,Materials & Plants,COGS,Northland Rain Bird Supply,Irrigation parts,2964.82
+2025-06-27,Materials & Plants,COGS,Northland Rain Bird Supply,Irrigation parts,2565.25
+2025-06-28,Materials & Plants,COGS,Bailey Nurseries,"Trees, shrubs & perennials",5442.7
+2025-06-28,Materials & Plants,COGS,Home Depot,Job materials,2144.01
+2025-06-28,Equipment Repairs & Maintenance,COGS,Lakehead Equipment,Skid steer hydraulic repair,1984.85
+2025-06-28,Interest Expense,Other,North Shore Bank,Interest - equipment term loan,1708
+2025-06-28,Depreciation,Other,Internal,Monthly depreciation - fleet & equipment,5650
+2025-07-01,Revenue - Maintenance Contracts,Revenue,Hartley Townhomes HOA,Maintenance contract - Jul 2025,6022.48
+2025-07-01,Revenue - Maintenance Contracts,Revenue,Bayfront Condos HOA,Maintenance contract - Jul 2025,7306.73
+2025-07-01,Revenue - Maintenance Contracts,Revenue,Essentia Clinic - Hermantown,Maintenance contract - Jul 2025,4974.66
+2025-07-01,Revenue - Maintenance Contracts,Revenue,Canal Park Lodge,Maintenance contract - Jul 2025,3793.94
+2025-07-01,Revenue - Maintenance Contracts,Revenue,Hermantown Retail Center,Maintenance contract - Jul 2025,4286.46
+2025-07-01,Revenue - Maintenance Contracts,Revenue,St. Luke's Annex,Maintenance contract - Jul 2025,5476.97
+2025-07-01,Revenue - Maintenance Contracts,Revenue,UMD Facilities,Maintenance contract - Jul 2025,8599.87
+2025-07-01,Revenue - Maintenance Contracts,Revenue,Residential maintenance plans (batch),Maintenance contract - Jul 2025,19267.29
+2025-07-01,Materials & Plants,COGS,Hedberg Landscape Supply,"Pavers, block, aggregate",9432.76
+2025-07-01,Materials & Plants,COGS,Hedberg Landscape Supply,"Pavers, block, aggregate",10563.3
+2025-07-01,Materials & Plants,COGS,Duluth Ready Mix,Concrete & base,1751.4
+2025-07-01,Employee Benefits,OpEx,Medica,Group health premium,6150
+2025-07-01,Rent,OpEx,Brandt Properties LLC,"Rent - shop & yard, 4410 Industrial Pkwy",8500
+2025-07-02,Materials & Plants,COGS,Duluth Ready Mix,Concrete & base,2795.55
+2025-07-03,Dues & Subscriptions,OpEx,Northland Country Club,Monthly dues,800
+2025-07-04,Materials & Plants,COGS,Duluth Ready Mix,Concrete & base,2051.1
+2025-07-04,Officer Salaries,OpEx,Dale Brandt,Payroll - Dale Brandt (President) salary,6153.85
+2025-07-04,Office Salaries,OpEx,Karen Brandt,Payroll - Karen Brandt (Office) salary,2000.0
+2025-07-04,Office Salaries,OpEx,Linda Ortiz,Payroll - Linda Ortiz (Office Manager) salary,1865.38
+2025-07-04,Field Labor,COGS,Miguel Santos,Payroll - Miguel Santos (Foreman) salary,2461.54
+2025-07-04,Field Labor,COGS,Tom Lindgren,Payroll - Tom Lindgren (Crew Lead) 80.0 hrs,1920.0
+2025-07-04,Field Labor,COGS,Jake Brandt,Payroll - Jake Brandt (Crew Lead) 80.0 hrs,960.0
+2025-07-04,Field Labor,COGS,Ana Reyes,Payroll - Ana Reyes (Crew Lead) 80.0 hrs,1880.0
+2025-07-04,Field Labor,COGS,Chris Hall,Payroll - Chris Hall (Laborer) 76.0 hrs,1368.0
+2025-07-04,Field Labor,COGS,Devon Price,Payroll - Devon Price (Laborer) 84.0 hrs,1512.0
+2025-07-04,Field Labor,COGS,Sam Kuehn,Payroll - Sam Kuehn (Laborer) 84.0 hrs,1512.0
+2025-07-04,Field Labor,COGS,Eli Novak,Payroll - Eli Novak (Laborer) 80.0 hrs,1440.0
+2025-07-04,Field Labor,COGS,Marcus Bell,Payroll - Marcus Bell (Laborer) 76.0 hrs,1368.0
+2025-07-04,Field Labor,COGS,Ty Larsen,Payroll - Ty Larsen (Laborer) 76.0 hrs,1368.0
+2025-07-04,Payroll Taxes,OpEx,EFTPS / MN Revenue,"Employer FICA, FUTA, SUTA",2077.61
+2025-07-05,Materials & Plants,COGS,Hedberg Landscape Supply,"Pavers, block, aggregate",7977.93
+2025-07-05,Materials & Plants,COGS,Home Depot,Job materials,1965.98
+2025-07-05,Vehicle Expense,OpEx,Ford Credit,Lease - F-250 crew truck #3,865
+2025-07-05,Vehicle Expense,OpEx,Ford Credit,Lease - F-250 crew truck #4,865
+2025-07-05,Vehicle Expense,OpEx,Ford Credit,Lease - F-250 crew truck #5,865
+2025-07-05,Vehicle Expense,OpEx,Toyota Financial Services,Lease - 2025 Lexus GX 550,1200
+2025-07-06,Fuel,COGS,Holiday Stationstores,Fleet fuel,1629.74
+2025-07-06,Meals,OpEx,Jimmy John's,Crew lunch - job site,155.17
+2025-07-07,Revenue - Design & Installation,Revenue,UMD Facilities,Patio & retaining wall - progress billing,8635.81
+2025-07-07,Materials & Plants,COGS,Northland Rain Bird Supply,Irrigation parts,2574.77
+2025-07-07,Advertising & Marketing,OpEx,Google Ads,Search ads,859.96
+2025-07-08,Equipment Repairs & Maintenance,COGS,Lakehead Equipment,Mower service,3032.25
+2025-07-10,Materials & Plants,COGS,Bailey Nurseries,"Trees, shrubs & perennials",3845.37
+2025-07-10,Insurance,OpEx,West Bend Insurance,GL & commercial auto - monthly installment,2000
+2025-07-12,Utilities,OpEx,Minnesota Power,Electric - shop,444.38
+2025-07-12,Utilities,OpEx,ComfortSystems,Gas & water - shop,276.32
+2025-07-14,Office Supplies,OpEx,Costco Wholesale,Costco - household items,540
+2025-07-15,Materials & Plants,COGS,Home Depot,Job materials,2195.35
+2025-07-15,Subcontractors,COGS,Arrowhead Electric,Sub - specialty work,9200.05
+2025-07-15,Telephone & Internet,OpEx,Verizon Wireless,Company cell plan - 9 lines,530.4
+2025-07-15,Telephone & Internet,OpEx,Spectrum Business,Office internet,189
+2025-07-17,Materials & Plants,COGS,Northland Rain Bird Supply,Irrigation parts,2389.75
+2025-07-17,Fuel,COGS,Holiday Stationstores,Fleet fuel,1163.83
+2025-07-18,Revenue - Design & Installation,Revenue,Congdon Residence - Pierce,Paver walkway & plantings,19941.5
+2025-07-18,Revenue - Design & Installation,Revenue,Park Point Residence - Kowalski,Paver walkway & plantings,58703.46
+2025-07-18,Revenue - Design & Installation,Revenue,Duluth Pack Store,Paver walkway & plantings,2839.77
+2025-07-18,Officer Salaries,OpEx,Dale Brandt,Payroll - Dale Brandt (President) salary,6153.85
+2025-07-18,Office Salaries,OpEx,Karen Brandt,Payroll - Karen Brandt (Office) salary,2000.0
+2025-07-18,Office Salaries,OpEx,Linda Ortiz,Payroll - Linda Ortiz (Office Manager) salary,1865.38
+2025-07-18,Field Labor,COGS,Miguel Santos,Payroll - Miguel Santos (Foreman) salary,2461.54
+2025-07-18,Field Labor,COGS,Tom Lindgren,Payroll - Tom Lindgren (Crew Lead) 80.0 hrs,1920.0
+2025-07-18,Field Labor,COGS,Jake Brandt,Payroll - Jake Brandt (Crew Lead) 80.0 hrs,960.0
+2025-07-18,Field Labor,COGS,Ana Reyes,Payroll - Ana Reyes (Crew Lead) 80.0 hrs,1880.0
+2025-07-18,Field Labor,COGS,Chris Hall,Payroll - Chris Hall (Laborer) 80.0 hrs,1440.0
+2025-07-18,Field Labor,COGS,Devon Price,Payroll - Devon Price (Laborer) 80.0 hrs,1440.0
+2025-07-18,Field Labor,COGS,Sam Kuehn,Payroll - Sam Kuehn (Laborer) 76.0 hrs,1368.0
+2025-07-18,Field Labor,COGS,Eli Novak,Payroll - Eli Novak (Laborer) 84.0 hrs,1512.0
+2025-07-18,Field Labor,COGS,Marcus Bell,Payroll - Marcus Bell (Laborer) 80.0 hrs,1440.0
+2025-07-18,Field Labor,COGS,Ty Larsen,Payroll - Ty Larsen (Laborer) 80.0 hrs,1440.0
+2025-07-18,Payroll Taxes,OpEx,EFTPS / MN Revenue,"Employer FICA, FUTA, SUTA",2083.4
+2025-07-18,Bank & Merchant Fees,OpEx,North Shore Bank,Merchant & service fees,296.78
+2025-07-18,Office Supplies,OpEx,Amazon,Printer toner,199.11
+2025-07-20,Revenue - Design & Installation,Revenue,Lester River Residence - Nelson,Design-build - progress billing,44354.81
+2025-07-20,Dump & Disposal Fees,COGS,WLSSD Yard Waste Site,Green waste disposal,1122.87
+2025-07-20,Software & Subscriptions,OpEx,Aspire Software,Field service software,425
+2025-07-20,Software & Subscriptions,OpEx,Intuit QuickBooks,Accounting software,90
+2025-07-20,Meals,OpEx,Duluth Grill,Crew lunch - job site,192.57
+2025-07-21,Fuel,COGS,Holiday Stationstores,Fleet fuel,1209.43
+2025-07-22,Revenue - Design & Installation,Revenue,City of Duluth,Storm debris removal - July 2025 derecho event - phase 1,52000
+2025-07-22,Fuel,COGS,Holiday Stationstores,Fleet fuel,1718.6
+2025-07-24,Materials & Plants,COGS,Duluth Ready Mix,Concrete & base,1768.04
+2025-07-25,Subcontractors,COGS,Superior Tree & Crane,Sub - storm debris haul & crane,24500
+2025-07-25,Materials & Plants,COGS,Bailey Nurseries,"Trees, shrubs & perennials",6004.75
+2025-07-25,Accounting Fees,OpEx,Clearwater CPA Group,Monthly bookkeeping & payroll review,800
+2025-07-26,Revenue - Design & Installation,Revenue,Essentia Clinic - Hermantown,Patio & retaining wall - progress billing,36524.65
+2025-07-26,Materials & Plants,COGS,Hedberg Landscape Supply,"Pavers, block, aggregate",7031.2
+2025-07-28,Interest Expense,Other,North Shore Bank,Interest - equipment term loan,1696
+2025-07-28,Depreciation,Other,Internal,Monthly depreciation - fleet & equipment,5650
+2025-08-01,Revenue - Maintenance Contracts,Revenue,Hartley Townhomes HOA,Maintenance contract - Aug 2025,6146.69
+2025-08-01,Revenue - Maintenance Contracts,Revenue,Bayfront Condos HOA,Maintenance contract - Aug 2025,7552.9
+2025-08-01,Revenue - Maintenance Contracts,Revenue,Essentia Clinic - Hermantown,Maintenance contract - Aug 2025,5046.27
+2025-08-01,Revenue - Maintenance Contracts,Revenue,Canal Park Lodge,Maintenance contract - Aug 2025,3931.62
+2025-08-01,Revenue - Maintenance Contracts,Revenue,Hermantown Retail Center,Maintenance contract - Aug 2025,4171.81
+2025-08-01,Revenue - Maintenance Contracts,Revenue,St. Luke's Annex,Maintenance contract - Aug 2025,5657.41
+2025-08-01,Revenue - Maintenance Contracts,Revenue,UMD Facilities,Maintenance contract - Aug 2025,9021.91
+2025-08-01,Revenue - Maintenance Contracts,Revenue,Residential maintenance plans (batch),Maintenance contract - Aug 2025,18613.47
+2025-08-01,Fuel,COGS,Holiday Stationstores,Fleet fuel,1169.37
+2025-08-01,Officer Salaries,OpEx,Dale Brandt,Payroll - Dale Brandt (President) salary,6153.85
+2025-08-01,Office Salaries,OpEx,Karen Brandt,Payroll - Karen Brandt (Office) salary,2000.0
+2025-08-01,Office Salaries,OpEx,Linda Ortiz,Payroll - Linda Ortiz (Office Manager) salary,1865.38
+2025-08-01,Field Labor,COGS,Miguel Santos,Payroll - Miguel Santos (Foreman) salary,2461.54
+2025-08-01,Field Labor,COGS,Tom Lindgren,Payroll - Tom Lindgren (Crew Lead) 80.0 hrs,1920.0
+2025-08-01,Field Labor,COGS,Jake Brandt,Payroll - Jake Brandt (Crew Lead) 80.0 hrs,960.0
+2025-08-01,Field Labor,COGS,Ana Reyes,Payroll - Ana Reyes (Crew Lead) 80.0 hrs,1880.0
+2025-08-01,Field Labor,COGS,Chris Hall,Payroll - Chris Hall (Laborer) 76.0 hrs,1368.0
+2025-08-01,Field Labor,COGS,Devon Price,Payroll - Devon Price (Laborer) 80.0 hrs,1440.0
+2025-08-01,Field Labor,COGS,Sam Kuehn,Payroll - Sam Kuehn (Laborer) 84.0 hrs,1512.0
+2025-08-01,Field Labor,COGS,Eli Novak,Payroll - Eli Novak (Laborer) 72.0 hrs,1296.0
+2025-08-01,Field Labor,COGS,Marcus Bell,Payroll - Marcus Bell (Laborer) 72.0 hrs,1296.0
+2025-08-01,Field Labor,COGS,Ty Larsen,Payroll - Ty Larsen (Laborer) 80.0 hrs,1440.0
+2025-08-01,Payroll Taxes,OpEx,EFTPS / MN Revenue,"Employer FICA, FUTA, SUTA",2060.22
+2025-08-01,Employee Benefits,OpEx,Medica,Group health premium,6150
+2025-08-01,Rent,OpEx,Brandt Properties LLC,"Rent - shop & yard, 4410 Industrial Pkwy",8500
+2025-08-03,Dues & Subscriptions,OpEx,Northland Country Club,Monthly dues,800
+2025-08-04,Materials & Plants,COGS,Bailey Nurseries,"Trees, shrubs & perennials",4560.7
+2025-08-05,Fuel,COGS,Holiday Stationstores,Fleet fuel,1598.69
+2025-08-05,Vehicle Expense,OpEx,Ford Credit,Lease - F-250 crew truck #3,865
+2025-08-05,Vehicle Expense,OpEx,Ford Credit,Lease - F-250 crew truck #4,865
+2025-08-05,Vehicle Expense,OpEx,Ford Credit,Lease - F-250 crew truck #5,865
+2025-08-05,Vehicle Expense,OpEx,Toyota Financial Services,Lease - 2025 Lexus GX 550,1200
+2025-08-06,Revenue - Design & Installation,Revenue,Kenwood Residence - Lind,Irrigation install,59578.69
+2025-08-06,Revenue - Design & Installation,Revenue,Chester Park Residence - Dahl,Landscape install - final invoice,4221.16
+2025-08-07,Materials & Plants,COGS,Home Depot,Job materials,1801.7
+2025-08-07,Fuel,COGS,Holiday Stationstores,Fleet fuel,1214.41
+2025-08-07,Advertising & Marketing,OpEx,Google Ads,Search ads,863.71
+2025-08-09,Revenue - Design & Installation,Revenue,Essentia Clinic - Hermantown,Irrigation install,72670.54
+2025-08-09,Equipment Repairs & Maintenance,COGS,Lakehead Equipment,Skid steer hydraulic repair,2130.45
+2025-08-10,Insurance,OpEx,West Bend Insurance,GL & commercial auto - monthly installment,2000
+2025-08-12,Revenue - Design & Installation,Revenue,Congdon Residence - Pierce,Irrigation install,17572.27
+2025-08-12,Materials & Plants,COGS,Northland Rain Bird Supply,Irrigation parts,2679.52
+2025-08-12,Fuel,COGS,Holiday Stationstores,Fleet fuel,1416.2
+2025-08-12,Utilities,OpEx,Minnesota Power,Electric - shop,516.3
+2025-08-12,Utilities,OpEx,ComfortSystems,Gas & water - shop,252.87
+2025-08-12,Office Supplies,OpEx,Amazon,Shop organizers,145.36
+2025-08-14,Office Supplies,OpEx,Costco Wholesale,Costco - home,620
+2025-08-15,Materials & Plants,COGS,Bailey Nurseries,"Trees, shrubs & perennials",4933.02
+2025-08-15,Subcontractors,COGS,North Shore Masonry,Sub - specialty work,8878.01
+2025-08-15,Officer Salaries,OpEx,Dale Brandt,Payroll - Dale Brandt (President) salary,6153.85
+2025-08-15,Office Salaries,OpEx,Karen Brandt,Payroll - Karen Brandt (Office) salary,2000.0
+2025-08-15,Office Salaries,OpEx,Linda Ortiz,Payroll - Linda Ortiz (Office Manager) salary,1865.38
+2025-08-15,Field Labor,COGS,Miguel Santos,Payroll - Miguel Santos (Foreman) salary,2461.54
+2025-08-15,Field Labor,COGS,Tom Lindgren,Payroll - Tom Lindgren (Crew Lead) 80.0 hrs,1920.0
+2025-08-15,Field Labor,COGS,Jake Brandt,Payroll - Jake Brandt (Crew Lead) 80.0 hrs,960.0
+2025-08-15,Field Labor,COGS,Ana Reyes,Payroll - Ana Reyes (Crew Lead) 80.0 hrs,1880.0
+2025-08-15,Field Labor,COGS,Chris Hall,Payroll - Chris Hall (Laborer) 72.0 hrs,1296.0
+2025-08-15,Field Labor,COGS,Devon Price,Payroll - Devon Price (Laborer) 80.0 hrs,1440.0
+2025-08-15,Field Labor,COGS,Sam Kuehn,Payroll - Sam Kuehn (Laborer) 80.0 hrs,1440.0
+2025-08-15,Field Labor,COGS,Eli Novak,Payroll - Eli Novak (Laborer) 72.0 hrs,1296.0
+2025-08-15,Field Labor,COGS,Marcus Bell,Payroll - Marcus Bell (Laborer) 72.0 hrs,1296.0
+2025-08-15,Field Labor,COGS,Ty Larsen,Payroll - Ty Larsen (Laborer) 76.0 hrs,1368.0
+2025-08-15,Payroll Taxes,OpEx,EFTPS / MN Revenue,"Employer FICA, FUTA, SUTA",2042.83
+2025-08-15,Telephone & Internet,OpEx,Verizon Wireless,Company cell plan - 9 lines,548.05
+2025-08-15,Telephone & Internet,OpEx,Spectrum Business,Office internet,189
+2025-08-15,Training & Education,OpEx,Marshall School,Tuition - fall semester,9000
+2025-08-15,Meals,OpEx,Jimmy John's,Crew lunch - job site,237.68
+2025-08-15,Meals,OpEx,Jimmy John's,Crew lunch - job site,163.73
+2025-08-16,Materials & Plants,COGS,Home Depot,Job materials,1539.07
+2025-08-17,Materials & Plants,COGS,Hedberg Landscape Supply,"Pavers, block, aggregate",11251.53
+2025-08-17,Materials & Plants,COGS,Northland Rain Bird Supply,Irrigation parts,2412.95
+2025-08-18,Bank & Merchant Fees,OpEx,North Shore Bank,Merchant & service fees,402.17
+2025-08-19,Revenue - Design & Installation,Revenue,City of Duluth,Storm debris removal - July 2025 derecho event - phase 2 (final),33000
+2025-08-19,Materials & Plants,COGS,Duluth Ready Mix,Concrete & base,2678.89
+2025-08-19,Materials & Plants,COGS,Duluth Ready Mix,Concrete & base,1950.23
+2025-08-20,Materials & Plants,COGS,Home Depot,Job materials,1215.07
+2025-08-20,Dump & Disposal Fees,COGS,WLSSD Yard Waste Site,Green waste disposal,996.97
+2025-08-20,Software & Subscriptions,OpEx,Aspire Software,Field service software,425
+2025-08-20,Software & Subscriptions,OpEx,Intuit QuickBooks,Accounting software,90
+2025-08-21,Subcontractors,COGS,Superior Tree & Crane,Sub - storm debris haul & crane (final),16500
+2025-08-21,Materials & Plants,COGS,Home Depot,Job materials,2078.36
+2025-08-25,Materials & Plants,COGS,Northland Rain Bird Supply,Irrigation parts,3105.9
+2025-08-25,Accounting Fees,OpEx,Clearwater CPA Group,Monthly bookkeeping & payroll review,800
+2025-08-26,Revenue - Design & Installation,Revenue,Glen Avon Residence - Strand,Design-build - progress billing,16957.34
+2025-08-26,Materials & Plants,COGS,Bailey Nurseries,"Trees, shrubs & perennials",4643.46
+2025-08-28,Materials & Plants,COGS,Hedberg Landscape Supply,"Pavers, block, aggregate",10796.81
+2025-08-28,Interest Expense,Other,North Shore Bank,Interest - equipment term loan,1684
+2025-08-28,Depreciation,Other,Internal,Monthly depreciation - fleet & equipment,5650
+2025-08-29,Officer Salaries,OpEx,Dale Brandt,Payroll - Dale Brandt (President) salary,6153.85
+2025-08-29,Office Salaries,OpEx,Karen Brandt,Payroll - Karen Brandt (Office) salary,2000.0
+2025-08-29,Office Salaries,OpEx,Linda Ortiz,Payroll - Linda Ortiz (Office Manager) salary,1865.38
+2025-08-29,Field Labor,COGS,Miguel Santos,Payroll - Miguel Santos (Foreman) salary,2461.54
+2025-08-29,Field Labor,COGS,Tom Lindgren,Payroll - Tom Lindgren (Crew Lead) 80.0 hrs,1920.0
+2025-08-29,Field Labor,COGS,Jake Brandt,Payroll - Jake Brandt (Crew Lead) 80.0 hrs,960.0
+2025-08-29,Field Labor,COGS,Ana Reyes,Payroll - Ana Reyes (Crew Lead) 80.0 hrs,1880.0
+2025-08-29,Field Labor,COGS,Chris Hall,Payroll - Chris Hall (Laborer) 72.0 hrs,1296.0
+2025-08-29,Field Labor,COGS,Devon Price,Payroll - Devon Price (Laborer) 80.0 hrs,1440.0
+2025-08-29,Field Labor,COGS,Sam Kuehn,Payroll - Sam Kuehn (Laborer) 76.0 hrs,1368.0
+2025-08-29,Field Labor,COGS,Eli Novak,Payroll - Eli Novak (Laborer) 80.0 hrs,1440.0
+2025-08-29,Field Labor,COGS,Marcus Bell,Payroll - Marcus Bell (Laborer) 76.0 hrs,1368.0
+2025-08-29,Field Labor,COGS,Ty Larsen,Payroll - Ty Larsen (Laborer) 80.0 hrs,1440.0
+2025-08-29,Payroll Taxes,OpEx,EFTPS / MN Revenue,"Employer FICA, FUTA, SUTA",2060.22
+2025-09-01,Revenue - Maintenance Contracts,Revenue,Hartley Townhomes HOA,Maintenance contract - Sep 2025,6199.31
+2025-09-01,Revenue - Maintenance Contracts,Revenue,Bayfront Condos HOA,Maintenance contract - Sep 2025,7483.43
+2025-09-01,Revenue - Maintenance Contracts,Revenue,Essentia Clinic - Hermantown,Maintenance contract - Sep 2025,5192.08
+2025-09-01,Revenue - Maintenance Contracts,Revenue,Canal Park Lodge,Maintenance contract - Sep 2025,3965.49
+2025-09-01,Revenue - Maintenance Contracts,Revenue,Hermantown Retail Center,Maintenance contract - Sep 2025,4210.2
+2025-09-01,Revenue - Maintenance Contracts,Revenue,St. Luke's Annex,Maintenance contract - Sep 2025,5493.99
+2025-09-01,Revenue - Maintenance Contracts,Revenue,UMD Facilities,Maintenance contract - Sep 2025,8578.76
+2025-09-01,Revenue - Maintenance Contracts,Revenue,Residential maintenance plans (batch),Maintenance contract - Sep 2025,18780.5
+2025-09-01,Employee Benefits,OpEx,Medica,Group health premium,6150
+2025-09-01,Rent,OpEx,Brandt Properties LLC,"Rent - shop & yard, 4410 Industrial Pkwy",8500
+2025-09-02,Materials & Plants,COGS,Bailey Nurseries,"Trees, shrubs & perennials",4413.89
+2025-09-02,Materials & Plants,COGS,Bailey Nurseries,"Trees, shrubs & perennials",5155.52
+2025-09-02,Meals,OpEx,Jimmy John's,Crew lunch - job site,155.58
+2025-09-03,Dues & Subscriptions,OpEx,Northland Country Club,Monthly dues,800
+2025-09-05,Revenue - Design & Installation,Revenue,Hunters Park Residence - Moe,Paver walkway & plantings,10569.12
+2025-09-05,Materials & Plants,COGS,Northland Rain Bird Supply,Irrigation parts,1552.32
+2025-09-05,Vehicle Expense,OpEx,Ford Credit,Lease - F-250 crew truck #3,865
+2025-09-05,Vehicle Expense,OpEx,Ford Credit,Lease - F-250 crew truck #4,865
+2025-09-05,Vehicle Expense,OpEx,Ford Credit,Lease - F-250 crew truck #5,865
+2025-09-05,Vehicle Expense,OpEx,Toyota Financial Services,Lease - 2025 Lexus GX 550,1200
+2025-09-06,Revenue - Design & Installation,Revenue,Duluth Pack Store,Paver walkway & plantings,291.36
+2025-09-06,Fuel,COGS,Holiday Stationstores,Fleet fuel,1248.71
+2025-09-07,Materials & Plants,COGS,Bailey Nurseries,"Trees, shrubs & perennials",4726.83
+2025-09-07,Materials & Plants,COGS,Home Depot,Job materials,1762.97
+2025-09-07,Advertising & Marketing,OpEx,Google Ads,Search ads,960.35
+2025-09-08,Materials & Plants,COGS,Bailey Nurseries,"Trees, shrubs & perennials",5953.42
+2025-09-09,Legal & Professional,OpEx,Arrowhead Legal Services,Contract review - commercial bids,603.2
+2025-09-10,Insurance,OpEx,West Bend Insurance,GL & commercial auto - monthly installment,2000
+2025-09-11,Materials & Plants,COGS,Home Depot,Job materials,1291.55
+2025-09-12,Materials & Plants,COGS,Duluth Ready Mix,Concrete & base,1652.42
+2025-09-12,Officer Salaries,OpEx,Dale Brandt,Payroll - Dale Brandt (President) salary,6153.85
+2025-09-12,Office Salaries,OpEx,Karen Brandt,Payroll - Karen Brandt (Office) salary,2000.0
+2025-09-12,Office Salaries,OpEx,Linda Ortiz,Payroll - Linda Ortiz (Office Manager) salary,1865.38
+2025-09-12,Field Labor,COGS,Miguel Santos,Payroll - Miguel Santos (Foreman) salary,2461.54
+2025-09-12,Field Labor,COGS,Tom Lindgren,Payroll - Tom Lindgren (Crew Lead) 80.0 hrs,1920.0
+2025-09-12,Field Labor,COGS,Jake Brandt,Payroll - Jake Brandt (Crew Lead) 80.0 hrs,960.0
+2025-09-12,Field Labor,COGS,Ana Reyes,Payroll - Ana Reyes (Crew Lead) 80.0 hrs,1880.0
+2025-09-12,Field Labor,COGS,Chris Hall,Payroll - Chris Hall (Laborer) 80.0 hrs,1440.0
+2025-09-12,Field Labor,COGS,Devon Price,Payroll - Devon Price (Laborer) 80.0 hrs,1440.0
+2025-09-12,Field Labor,COGS,Sam Kuehn,Payroll - Sam Kuehn (Laborer) 80.0 hrs,1440.0
+2025-09-12,Field Labor,COGS,Eli Novak,Payroll - Eli Novak (Laborer) 80.0 hrs,1440.0
+2025-09-12,Field Labor,COGS,Marcus Bell,Payroll - Marcus Bell (Laborer) 76.0 hrs,1368.0
+2025-09-12,Field Labor,COGS,Ty Larsen,Payroll - Ty Larsen (Laborer) 84.0 hrs,1512.0
+2025-09-12,Payroll Taxes,OpEx,EFTPS / MN Revenue,"Employer FICA, FUTA, SUTA",2083.4
+2025-09-12,Utilities,OpEx,Minnesota Power,Electric - shop,510.36
+2025-09-12,Utilities,OpEx,ComfortSystems,Gas & water - shop,232.64
+2025-09-14,Office Supplies,OpEx,Costco Wholesale,Costco - household,480
+2025-09-15,Subcontractors,COGS,Arrowhead Electric,Sub - specialty work,5128.39
+2025-09-15,Telephone & Internet,OpEx,Verizon Wireless,Company cell plan - 9 lines,543.17
+2025-09-15,Telephone & Internet,OpEx,Spectrum Business,Office internet,189
+2025-09-16,Materials & Plants,COGS,Hedberg Landscape Supply,"Pavers, block, aggregate",10176.02
+2025-09-16,Fuel,COGS,Holiday Stationstores,Fleet fuel,1409.94
+2025-09-17,Revenue - Design & Installation,Revenue,Duluth Pack Store,Patio & retaining wall - progress billing,47027.03
+2025-09-17,Materials & Plants,COGS,Northland Rain Bird Supply,Irrigation parts,2808.35
+2025-09-18,Bank & Merchant Fees,OpEx,North Shore Bank,Merchant & service fees,361.39
+2025-09-18,Meals,OpEx,Jimmy John's,Crew lunch - job site,203.98
+2025-09-19,Materials & Plants,COGS,Hedberg Landscape Supply,"Pavers, block, aggregate",6715.9
+2025-09-20,Materials & Plants,COGS,Home Depot,Job materials,1095.77
+2025-09-20,Materials & Plants,COGS,Duluth Ready Mix,Concrete & base,1949.18
+2025-09-20,Dump & Disposal Fees,COGS,WLSSD Yard Waste Site,Green waste disposal,1059.25
+2025-09-20,Software & Subscriptions,OpEx,Aspire Software,Field service software,425
+2025-09-20,Software & Subscriptions,OpEx,Intuit QuickBooks,Accounting software,90
+2025-09-22,Materials & Plants,COGS,Duluth Ready Mix,Concrete & base,1534.52
+2025-09-23,Revenue - Design & Installation,Revenue,Bayfront Condos HOA,Landscape install - final invoice,23221.12
+2025-09-23,Materials & Plants,COGS,Northland Rain Bird Supply,Irrigation parts,1905.84
+2025-09-23,Equipment Repairs & Maintenance,COGS,Lakehead Equipment,Skid steer hydraulic repair,3084.45
+2025-09-23,Office Supplies,OpEx,Amazon,Shop organizers,101.37
+2025-09-25,Materials & Plants,COGS,Hedberg Landscape Supply,"Pavers, block, aggregate",8421.86
+2025-09-25,Materials & Plants,COGS,Northland Rain Bird Supply,Irrigation parts,2375.35
+2025-09-25,Fuel,COGS,Holiday Stationstores,Fleet fuel,1212.64
+2025-09-25,Accounting Fees,OpEx,Clearwater CPA Group,Monthly bookkeeping & payroll review,800
+2025-09-26,Revenue - Design & Installation,Revenue,Lester River Residence - Nelson,Patio & retaining wall - progress billing,29212.81
+2025-09-26,Materials & Plants,COGS,Hedberg Landscape Supply,"Pavers, block, aggregate",10080.11
+2025-09-26,Officer Salaries,OpEx,Dale Brandt,Payroll - Dale Brandt (President) salary,6153.85
+2025-09-26,Office Salaries,OpEx,Karen Brandt,Payroll - Karen Brandt (Office) salary,2000.0
+2025-09-26,Office Salaries,OpEx,Linda Ortiz,Payroll - Linda Ortiz (Office Manager) salary,1865.38
+2025-09-26,Field Labor,COGS,Miguel Santos,Payroll - Miguel Santos (Foreman) salary,2461.54
+2025-09-26,Field Labor,COGS,Tom Lindgren,Payroll - Tom Lindgren (Crew Lead) 80.0 hrs,1920.0
+2025-09-26,Field Labor,COGS,Jake Brandt,Payroll - Jake Brandt (Crew Lead) 80.0 hrs,960.0
+2025-09-26,Field Labor,COGS,Ana Reyes,Payroll - Ana Reyes (Crew Lead) 80.0 hrs,1880.0
+2025-09-26,Field Labor,COGS,Chris Hall,Payroll - Chris Hall (Laborer) 72.0 hrs,1296.0
+2025-09-26,Field Labor,COGS,Devon Price,Payroll - Devon Price (Laborer) 76.0 hrs,1368.0
+2025-09-26,Field Labor,COGS,Sam Kuehn,Payroll - Sam Kuehn (Laborer) 76.0 hrs,1368.0
+2025-09-26,Field Labor,COGS,Eli Novak,Payroll - Eli Novak (Laborer) 80.0 hrs,1440.0
+2025-09-26,Field Labor,COGS,Marcus Bell,Payroll - Marcus Bell (Laborer) 72.0 hrs,1296.0
+2025-09-26,Field Labor,COGS,Ty Larsen,Payroll - Ty Larsen (Laborer) 80.0 hrs,1440.0
+2025-09-26,Payroll Taxes,OpEx,EFTPS / MN Revenue,"Employer FICA, FUTA, SUTA",2048.63
+2025-09-27,Revenue - Design & Installation,Revenue,Essentia Clinic - Hermantown,Design-build - progress billing,4927.24
+2025-09-27,Fuel,COGS,Holiday Stationstores,Fleet fuel,1193.18
+2025-09-28,Revenue - Design & Installation,Revenue,Bayfront Condos HOA,Irrigation install,32951.32
+2025-09-28,Interest Expense,Other,North Shore Bank,Interest - equipment term loan,1672
+2025-09-28,Depreciation,Other,Internal,Monthly depreciation - fleet & equipment,5650
+2025-09-30,Other Income,Other Income,Lakehead Equipment,Gain on sale - 2016 Bobcat S650 (traded),18500
+2025-10-01,Revenue - Maintenance Contracts,Revenue,Hartley Townhomes HOA,Maintenance contract - Oct 2025,6116.83
+2025-10-01,Revenue - Maintenance Contracts,Revenue,Bayfront Condos HOA,Maintenance contract - Oct 2025,7332.08
+2025-10-01,Revenue - Maintenance Contracts,Revenue,Essentia Clinic - Hermantown,Maintenance contract - Oct 2025,4986.84
+2025-10-01,Revenue - Maintenance Contracts,Revenue,Canal Park Lodge,Maintenance contract - Oct 2025,3983.62
+2025-10-01,Revenue - Maintenance Contracts,Revenue,Hermantown Retail Center,Maintenance contract - Oct 2025,4361.24
+2025-10-01,Revenue - Maintenance Contracts,Revenue,St. Luke's Annex,Maintenance contract - Oct 2025,5645.1
+2025-10-01,Revenue - Maintenance Contracts,Revenue,UMD Facilities,Maintenance contract - Oct 2025,8990.69
+2025-10-01,Revenue - Maintenance Contracts,Revenue,Residential maintenance plans (batch),Maintenance contract - Oct 2025,19082.85
+2025-10-01,Materials & Plants,COGS,Hedberg Landscape Supply,"Pavers, block, aggregate",6965.15
+2025-10-01,Materials & Plants,COGS,Northland Rain Bird Supply,Irrigation parts,1572.02
+2025-10-01,Employee Benefits,OpEx,Medica,Group health premium,6150
+2025-10-01,Rent,OpEx,Brandt Properties LLC,"Rent - shop & yard, 4410 Industrial Pkwy",8500
+2025-10-02,Meals,OpEx,Jimmy John's,Crew lunch - job site,184.54
+2025-10-03,Revenue - Design & Installation,Revenue,Lester River Residence - Nelson,Patio & retaining wall - progress billing,20661.25
+2025-10-03,Materials & Plants,COGS,Home Depot,Job materials,1175.8
+2025-10-03,Materials & Plants,COGS,Home Depot,Job materials,1383.16
+2025-10-03,Equipment Repairs & Maintenance,COGS,Lakehead Equipment,Plow blade repair,3364.96
+2025-10-03,Dues & Subscriptions,OpEx,Northland Country Club,Monthly dues,800
+2025-10-05,Revenue - Design & Installation,Revenue,Essentia Clinic - Hermantown,Design-build - progress billing,12254.44
+2025-10-05,Revenue - Design & Installation,Revenue,Hermantown Retail Center,Landscape install - final invoice,12045.82
+2025-10-05,Materials & Plants,COGS,Duluth Ready Mix,Concrete & base,1376.09
+2025-10-05,Vehicle Expense,OpEx,Ford Credit,Lease - F-250 crew truck #3,865
+2025-10-05,Vehicle Expense,OpEx,Ford Credit,Lease - F-250 crew truck #4,865
+2025-10-05,Vehicle Expense,OpEx,Ford Credit,Lease - F-250 crew truck #5,865
+2025-10-05,Vehicle Expense,OpEx,Toyota Financial Services,Lease - 2025 Lexus GX 550,1200
+2025-10-06,Materials & Plants,COGS,Duluth Ready Mix,Concrete & base,1458.58
+2025-10-07,Advertising & Marketing,OpEx,Google Ads,Search ads,1128.91
+2025-10-08,Materials & Plants,COGS,Bailey Nurseries,"Trees, shrubs & perennials",4533.92
+2025-10-08,Travel,OpEx,Hilton Minneapolis,NLA trade conference - lodging,690
+2025-10-10,Officer Salaries,OpEx,Dale Brandt,Payroll - Dale Brandt (President) salary,6153.85
+2025-10-10,Office Salaries,OpEx,Karen Brandt,Payroll - Karen Brandt (Office) salary,2000.0
+2025-10-10,Office Salaries,OpEx,Linda Ortiz,Payroll - Linda Ortiz (Office Manager) salary,1865.38
+2025-10-10,Field Labor,COGS,Miguel Santos,Payroll - Miguel Santos (Foreman) salary,2461.54
+2025-10-10,Field Labor,COGS,Tom Lindgren,Payroll - Tom Lindgren (Crew Lead) 80.0 hrs,1920.0
+2025-10-10,Field Labor,COGS,Jake Brandt,Payroll - Jake Brandt (Crew Lead) 80.0 hrs,960.0
+2025-10-10,Field Labor,COGS,Ana Reyes,Payroll - Ana Reyes (Crew Lead) 80.0 hrs,1880.0
+2025-10-10,Field Labor,COGS,Chris Hall,Payroll - Chris Hall (Laborer) 80.0 hrs,1440.0
+2025-10-10,Field Labor,COGS,Devon Price,Payroll - Devon Price (Laborer) 80.0 hrs,1440.0
+2025-10-10,Field Labor,COGS,Sam Kuehn,Payroll - Sam Kuehn (Laborer) 76.0 hrs,1368.0
+2025-10-10,Field Labor,COGS,Eli Novak,Payroll - Eli Novak (Laborer) 76.0 hrs,1368.0
+2025-10-10,Field Labor,COGS,Marcus Bell,Payroll - Marcus Bell (Laborer) 80.0 hrs,1440.0
+2025-10-10,Field Labor,COGS,Ty Larsen,Payroll - Ty Larsen (Laborer) 80.0 hrs,1440.0
+2025-10-10,Payroll Taxes,OpEx,EFTPS / MN Revenue,"Employer FICA, FUTA, SUTA",2071.81
+2025-10-10,Insurance,OpEx,West Bend Insurance,GL & commercial auto - monthly installment,2000
+2025-10-11,Revenue - Design & Installation,Revenue,Bayfront Condos HOA,Irrigation install,26899.83
+2025-10-11,Materials & Plants,COGS,Northland Rain Bird Supply,Irrigation parts,2402.52
+2025-10-11,Materials & Plants,COGS,Northland Rain Bird Supply,Irrigation parts,1861.79
+2025-10-12,Materials & Plants,COGS,Hedberg Landscape Supply,"Pavers, block, aggregate",7752.54
+2025-10-12,Utilities,OpEx,Minnesota Power,Electric - shop,579.07
+2025-10-12,Utilities,OpEx,ComfortSystems,Gas & water - shop,290.36
+2025-10-13,Materials & Plants,COGS,Bailey Nurseries,"Trees, shrubs & perennials",3205.56
+2025-10-13,Office Supplies,OpEx,Amazon,Safety vests & gloves,109.37
+2025-10-14,Fuel,COGS,Holiday Stationstores,Fleet fuel,1579.93
+2025-10-14,Office Supplies,OpEx,Costco Wholesale,Costco - household items,590
+2025-10-15,Materials & Plants,COGS,Hedberg Landscape Supply,"Pavers, block, aggregate",7439.75
+2025-10-15,Materials & Plants,COGS,Bailey Nurseries,"Trees, shrubs & perennials",4354.92
+2025-10-15,Subcontractors,COGS,North Shore Masonry,Sub - specialty work,7341.45
+2025-10-15,Fuel,COGS,Holiday Stationstores,Fleet fuel,1435.93
+2025-10-15,Telephone & Internet,OpEx,Verizon Wireless,Company cell plan - 9 lines,547.03
+2025-10-15,Telephone & Internet,OpEx,Spectrum Business,Office internet,189
+2025-10-17,Materials & Plants,COGS,Duluth Ready Mix,Concrete & base,2001.62
+2025-10-18,Fuel,COGS,Holiday Stationstores,Fleet fuel,1364.65
+2025-10-18,Bank & Merchant Fees,OpEx,North Shore Bank,Merchant & service fees,304.27
+2025-10-19,Fuel,COGS,Holiday Stationstores,Fleet fuel,1460.07
+2025-10-20,Materials & Plants,COGS,Hedberg Landscape Supply,"Pavers, block, aggregate",5480.97
+2025-10-20,Dump & Disposal Fees,COGS,WLSSD Yard Waste Site,Green waste disposal,1227.73
+2025-10-20,Software & Subscriptions,OpEx,Aspire Software,Field service software,425
+2025-10-20,Software & Subscriptions,OpEx,Intuit QuickBooks,Accounting software,90
+2025-10-21,Revenue - Design & Installation,Revenue,Bayfront Condos HOA,Landscape install - final invoice,21977.55
+2025-10-24,Officer Salaries,OpEx,Dale Brandt,Payroll - Dale Brandt (President) salary,6153.85
+2025-10-24,Office Salaries,OpEx,Karen Brandt,Payroll - Karen Brandt (Office) salary,2000.0
+2025-10-24,Office Salaries,OpEx,Linda Ortiz,Payroll - Linda Ortiz (Office Manager) salary,1865.38
+2025-10-24,Field Labor,COGS,Miguel Santos,Payroll - Miguel Santos (Foreman) salary,2461.54
+2025-10-24,Field Labor,COGS,Tom Lindgren,Payroll - Tom Lindgren (Crew Lead) 80.0 hrs,1920.0
+2025-10-24,Field Labor,COGS,Jake Brandt,Payroll - Jake Brandt (Crew Lead) 80.0 hrs,960.0
+2025-10-24,Field Labor,COGS,Ana Reyes,Payroll - Ana Reyes (Crew Lead) 80.0 hrs,1880.0
+2025-10-24,Field Labor,COGS,Chris Hall,Payroll - Chris Hall (Laborer) 80.0 hrs,1440.0
+2025-10-24,Field Labor,COGS,Devon Price,Payroll - Devon Price (Laborer) 72.0 hrs,1296.0
+2025-10-24,Field Labor,COGS,Sam Kuehn,Payroll - Sam Kuehn (Laborer) 84.0 hrs,1512.0
+2025-10-24,Field Labor,COGS,Eli Novak,Payroll - Eli Novak (Laborer) 80.0 hrs,1440.0
+2025-10-24,Field Labor,COGS,Marcus Bell,Payroll - Marcus Bell (Laborer) 84.0 hrs,1512.0
+2025-10-24,Field Labor,COGS,Ty Larsen,Payroll - Ty Larsen (Laborer) 72.0 hrs,1296.0
+2025-10-24,Payroll Taxes,OpEx,EFTPS / MN Revenue,"Employer FICA, FUTA, SUTA",2071.81
+2025-10-25,Accounting Fees,OpEx,Clearwater CPA Group,Monthly bookkeeping & payroll review,800
+2025-10-28,Revenue - Design & Installation,Revenue,Proctor Schools,Landscape install - final invoice,31561.11
+2025-10-28,Materials & Plants,COGS,Northland Rain Bird Supply,Irrigation parts,2117.84
+2025-10-28,Interest Expense,Other,North Shore Bank,Interest - equipment term loan,1660
+2025-10-28,Depreciation,Other,Internal,Monthly depreciation - fleet & equipment,5650
+2025-10-28,Meals,OpEx,Jimmy John's,Crew lunch - job site,208.73
+2025-11-01,Revenue - Maintenance Contracts,Revenue,Hartley Townhomes HOA,Maintenance contract - Nov 2025,6236.07
+2025-11-01,Revenue - Maintenance Contracts,Revenue,Bayfront Condos HOA,Maintenance contract - Nov 2025,7328.36
+2025-11-01,Revenue - Maintenance Contracts,Revenue,Essentia Clinic - Hermantown,Maintenance contract - Nov 2025,5180.58
+2025-11-01,Revenue - Maintenance Contracts,Revenue,Canal Park Lodge,Maintenance contract - Nov 2025,3995.54
+2025-11-01,Revenue - Maintenance Contracts,Revenue,Hermantown Retail Center,Maintenance contract - Nov 2025,4300.9
+2025-11-01,Revenue - Maintenance Contracts,Revenue,St. Luke's Annex,Maintenance contract - Nov 2025,5489.68
+2025-11-01,Revenue - Maintenance Contracts,Revenue,UMD Facilities,Maintenance contract - Nov 2025,9042.42
+2025-11-01,Revenue - Maintenance Contracts,Revenue,Residential maintenance plans (batch),Maintenance contract - Nov 2025,18749.04
+2025-11-01,Employee Benefits,OpEx,Medica,Group health premium,6150
+2025-11-01,Rent,OpEx,Brandt Properties LLC,"Rent - shop & yard, 4410 Industrial Pkwy",8500
+2025-11-02,Materials & Plants,COGS,Northland Rain Bird Supply,Irrigation parts,807.04
+2025-11-03,Dues & Subscriptions,OpEx,Northland Country Club,Monthly dues,800
+2025-11-03,Meals,OpEx,Pizza Luce,Crew lunch - job site,214.4
+2025-11-05,Materials & Plants,COGS,Duluth Ready Mix,Concrete & base,618.8
+2025-11-05,Fuel,COGS,Holiday Stationstores,Fleet fuel,1705.05
+2025-11-05,Vehicle Expense,OpEx,Ford Credit,Lease - F-250 crew truck #3,865
+2025-11-05,Vehicle Expense,OpEx,Ford Credit,Lease - F-250 crew truck #4,865
+2025-11-05,Vehicle Expense,OpEx,Ford Credit,Lease - F-250 crew truck #5,865
+2025-11-05,Vehicle Expense,OpEx,Toyota Financial Services,Lease - 2025 Lexus GX 550,1200
+2025-11-06,Materials & Plants,COGS,Bailey Nurseries,"Trees, shrubs & perennials",1389.58
+2025-11-06,Fuel,COGS,Holiday Stationstores,Fleet fuel,1470.77
+2025-11-06,Fuel,COGS,Holiday Stationstores,Fleet fuel,1590.17
+2025-11-07,Revenue - Design & Installation,Revenue,Bayfront Condos HOA,Landscape install - final invoice,13687.75
+2025-11-07,Officer Salaries,OpEx,Dale Brandt,Payroll - Dale Brandt (President) salary,6153.85
+2025-11-07,Office Salaries,OpEx,Karen Brandt,Payroll - Karen Brandt (Office) salary,2000.0
+2025-11-07,Office Salaries,OpEx,Linda Ortiz,Payroll - Linda Ortiz (Office Manager) salary,1865.38
+2025-11-07,Field Labor,COGS,Miguel Santos,Payroll - Miguel Santos (Foreman) salary,2461.54
+2025-11-07,Field Labor,COGS,Tom Lindgren,Payroll - Tom Lindgren (Crew Lead) 80.0 hrs,1920.0
+2025-11-07,Field Labor,COGS,Jake Brandt,Payroll - Jake Brandt (Crew Lead) 80.0 hrs,960.0
+2025-11-07,Field Labor,COGS,Ana Reyes,Payroll - Ana Reyes (Crew Lead) 80.0 hrs,1880.0
+2025-11-07,Field Labor,COGS,Chris Hall,Payroll - Chris Hall (Laborer) 84.0 hrs,1512.0
+2025-11-07,Field Labor,COGS,Devon Price,Payroll - Devon Price (Laborer) 80.0 hrs,1440.0
+2025-11-07,Field Labor,COGS,Sam Kuehn,Payroll - Sam Kuehn (Laborer) 80.0 hrs,1440.0
+2025-11-07,Field Labor,COGS,Eli Novak,Payroll - Eli Novak (Laborer) 76.0 hrs,1368.0
+2025-11-07,Field Labor,COGS,Marcus Bell,Payroll - Marcus Bell (Laborer) 84.0 hrs,1512.0
+2025-11-07,Field Labor,COGS,Ty Larsen,Payroll - Ty Larsen (Laborer) 80.0 hrs,1440.0
+2025-11-07,Payroll Taxes,OpEx,EFTPS / MN Revenue,"Employer FICA, FUTA, SUTA",2089.2
+2025-11-07,Advertising & Marketing,OpEx,Google Ads,Search ads,806.37
+2025-11-08,Equipment Repairs & Maintenance,COGS,Lakehead Equipment,Mower service,3031.04
+2025-11-09,Legal & Professional,OpEx,Arrowhead Legal Services,Contract review - commercial bids,612.49
+2025-11-10,Insurance,OpEx,West Bend Insurance,GL & commercial auto - monthly installment,2000
+2025-11-12,Materials & Plants,COGS,Northland Rain Bird Supply,Irrigation parts,574.47
+2025-11-12,Materials & Plants,COGS,Northland Rain Bird Supply,Irrigation parts,723.82
+2025-11-12,Utilities,OpEx,Minnesota Power,Electric - shop,464.45
+2025-11-12,Utilities,OpEx,ComfortSystems,Gas & water - shop,287.3
+2025-11-14,Office Supplies,OpEx,Costco Wholesale,Costco - home groceries,650
+2025-11-15,Revenue - Design & Installation,Revenue,Chester Park Residence - Dahl,Paver walkway & plantings,8538.46
+2025-11-15,Subcontractors,COGS,Arrowhead Electric,Sub - specialty work,6354.58
+2025-11-15,Telephone & Internet,OpEx,Verizon Wireless,Company cell plan - 9 lines,532.87
+2025-11-15,Telephone & Internet,OpEx,Spectrum Business,Office internet,189
+2025-11-17,Materials & Plants,COGS,Hedberg Landscape Supply,"Pavers, block, aggregate",3057.34
+2025-11-17,Materials & Plants,COGS,Bailey Nurseries,"Trees, shrubs & perennials",1262.65
+2025-11-18,Fuel,COGS,Holiday Stationstores,Fleet fuel,1468.75
+2025-11-18,Bank & Merchant Fees,OpEx,North Shore Bank,Merchant & service fees,279.26
+2025-11-19,Office Supplies,OpEx,Amazon,Safety vests & gloves,116.07
+2025-11-20,Materials & Plants,COGS,Hedberg Landscape Supply,"Pavers, block, aggregate",3855.31
+2025-11-20,Dump & Disposal Fees,COGS,WLSSD Yard Waste Site,Green waste disposal,1207.22
+2025-11-20,Software & Subscriptions,OpEx,Aspire Software,Field service software,425
+2025-11-20,Software & Subscriptions,OpEx,Intuit QuickBooks,Accounting software,90
+2025-11-21,Officer Salaries,OpEx,Dale Brandt,Payroll - Dale Brandt (President) salary,6153.85
+2025-11-21,Office Salaries,OpEx,Karen Brandt,Payroll - Karen Brandt (Office) salary,2000.0
+2025-11-21,Office Salaries,OpEx,Linda Ortiz,Payroll - Linda Ortiz (Office Manager) salary,1865.38
+2025-11-21,Field Labor,COGS,Miguel Santos,Payroll - Miguel Santos (Foreman) salary,2461.54
+2025-11-21,Field Labor,COGS,Tom Lindgren,Payroll - Tom Lindgren (Crew Lead) 80.0 hrs,1920.0
+2025-11-21,Field Labor,COGS,Jake Brandt,Payroll - Jake Brandt (Crew Lead) 80.0 hrs,960.0
+2025-11-21,Field Labor,COGS,Ana Reyes,Payroll - Ana Reyes (Crew Lead) 80.0 hrs,1880.0
+2025-11-21,Field Labor,COGS,Chris Hall,Payroll - Chris Hall (Laborer) 80.0 hrs,1440.0
+2025-11-21,Field Labor,COGS,Devon Price,Payroll - Devon Price (Laborer) 72.0 hrs,1296.0
+2025-11-21,Field Labor,COGS,Sam Kuehn,Payroll - Sam Kuehn (Laborer) 84.0 hrs,1512.0
+2025-11-21,Field Labor,COGS,Eli Novak,Payroll - Eli Novak (Laborer) 72.0 hrs,1296.0
+2025-11-21,Field Labor,COGS,Marcus Bell,Payroll - Marcus Bell (Laborer) 80.0 hrs,1440.0
+2025-11-21,Field Labor,COGS,Ty Larsen,Payroll - Ty Larsen (Laborer) 72.0 hrs,1296.0
+2025-11-21,Payroll Taxes,OpEx,EFTPS / MN Revenue,"Employer FICA, FUTA, SUTA",2054.42
+2025-11-23,Materials & Plants,COGS,Home Depot,Job materials,468.31
+2025-11-23,Materials & Plants,COGS,Duluth Ready Mix,Concrete & base,889.27
+2025-11-23,Meals,OpEx,Jimmy John's,Crew lunch - job site,146.06
+2025-11-24,Revenue - Design & Installation,Revenue,Essentia Clinic - Hermantown,Irrigation install,12572.15
+2025-11-25,Materials & Plants,COGS,Home Depot,Job materials,662.06
+2025-11-25,Accounting Fees,OpEx,Clearwater CPA Group,Monthly bookkeeping & payroll review,800
+2025-11-26,Revenue - Design & Installation,Revenue,Glen Avon Residence - Strand,Paver walkway & plantings,12027.93
+2025-11-27,Revenue - Design & Installation,Revenue,Hermantown Retail Center,Design-build - progress billing,10173.7
+2025-11-27,Materials & Plants,COGS,Northland Rain Bird Supply,Irrigation parts,600.23
+2025-11-28,Interest Expense,Other,North Shore Bank,Interest - equipment term loan,1648
+2025-11-28,Depreciation,Other,Internal,Monthly depreciation - fleet & equipment,5650
+2025-12-01,Employee Benefits,OpEx,Medica,Group health premium,6150
+2025-12-01,Rent,OpEx,Brandt Properties LLC,"Rent - shop & yard, 4410 Industrial Pkwy",8500
+2025-12-03,Dues & Subscriptions,OpEx,Northland Country Club,Monthly dues,800
+2025-12-05,Revenue - Snow Removal,Revenue,Hartley Townhomes HOA,Seasonal snow contract - monthly,6206.09
+2025-12-05,Revenue - Snow Removal,Revenue,Bayfront Condos HOA,Seasonal snow contract - monthly,5798.92
+2025-12-05,Revenue - Snow Removal,Revenue,Essentia Clinic - Hermantown,Seasonal snow contract - monthly,5812.4
+2025-12-05,Revenue - Snow Removal,Revenue,Hermantown Retail Center,Seasonal snow contract - monthly,6116.74
+2025-12-05,Revenue - Snow Removal,Revenue,St. Luke's Annex,Seasonal snow contract - monthly,5417.55
+2025-12-05,Revenue - Snow Removal,Revenue,Canal Park Lodge,Seasonal snow contract - monthly,6017.16
+2025-12-05,Fuel,COGS,Holiday Stationstores,Fleet fuel,1311.86
+2025-12-05,Officer Salaries,OpEx,Dale Brandt,Payroll - Dale Brandt (President) salary,6153.85
+2025-12-05,Office Salaries,OpEx,Karen Brandt,Payroll - Karen Brandt (Office) salary,2000.0
+2025-12-05,Office Salaries,OpEx,Linda Ortiz,Payroll - Linda Ortiz (Office Manager) salary,1865.38
+2025-12-05,Field Labor,COGS,Miguel Santos,Payroll - Miguel Santos (Foreman) salary,2461.54
+2025-12-05,Field Labor,COGS,Tom Lindgren,Payroll - Tom Lindgren (Crew Lead) 56.0 hrs,1344.0
+2025-12-05,Field Labor,COGS,Chris Hall,Payroll - Chris Hall (Laborer) 48.0 hrs,864.0
+2025-12-05,Field Labor,COGS,Devon Price,Payroll - Devon Price (Laborer) 40.0 hrs,720.0
+2025-12-05,Payroll Taxes,OpEx,EFTPS / MN Revenue,"Employer FICA, FUTA, SUTA",1240.41
+2025-12-05,Vehicle Expense,OpEx,Ford Credit,Lease - F-250 crew truck #3,865
+2025-12-05,Vehicle Expense,OpEx,Ford Credit,Lease - F-250 crew truck #4,865
+2025-12-05,Vehicle Expense,OpEx,Ford Credit,Lease - F-250 crew truck #5,865
+2025-12-05,Vehicle Expense,OpEx,Toyota Financial Services,Lease - 2025 Lexus GX 550,1200
+2025-12-07,Advertising & Marketing,OpEx,Google Ads,Search ads,359.68
+2025-12-08,Fuel,COGS,Holiday Stationstores,Fleet fuel,1314.07
+2025-12-08,Office Supplies,OpEx,Amazon,Safety vests & gloves,99.93
+2025-12-10,Insurance,OpEx,West Bend Insurance,GL & commercial auto - monthly installment,2000
+2025-12-12,Utilities,OpEx,Minnesota Power,Electric - shop,745.36
+2025-12-12,Utilities,OpEx,ComfortSystems,Gas & water - shop,610.66
+2025-12-14,Office Supplies,OpEx,Costco Wholesale,Costco - holiday gifts family,1020
+2025-12-15,Telephone & Internet,OpEx,Verizon Wireless,Company cell plan - 9 lines,550.35
+2025-12-15,Telephone & Internet,OpEx,Spectrum Business,Office internet,189
+2025-12-18,Insurance,OpEx,West Bend Insurance,GL & commercial auto - annual renewal 1/1/2026-12/31/2026 paid in full,24000
+2025-12-18,Bank & Merchant Fees,OpEx,North Shore Bank,Merchant & service fees,345.33
+2025-12-19,Officer Salaries,OpEx,Dale Brandt,Payroll - Dale Brandt (President) salary,6153.85
+2025-12-19,Office Salaries,OpEx,Karen Brandt,Payroll - Karen Brandt (Office) salary,2000.0
+2025-12-19,Office Salaries,OpEx,Linda Ortiz,Payroll - Linda Ortiz (Office Manager) salary,1865.38
+2025-12-19,Field Labor,COGS,Miguel Santos,Payroll - Miguel Santos (Foreman) salary,2461.54
+2025-12-19,Field Labor,COGS,Tom Lindgren,Payroll - Tom Lindgren (Crew Lead) 72.0 hrs,1728.0
+2025-12-19,Field Labor,COGS,Chris Hall,Payroll - Chris Hall (Laborer) 56.0 hrs,1008.0
+2025-12-19,Field Labor,COGS,Devon Price,Payroll - Devon Price (Laborer) 40.0 hrs,720.0
+2025-12-19,Payroll Taxes,OpEx,EFTPS / MN Revenue,"Employer FICA, FUTA, SUTA",1282.91
+2025-12-20,Fuel,COGS,Holiday Stationstores,Fleet fuel,1010.18
+2025-12-20,Software & Subscriptions,OpEx,Aspire Software,Field service software,425
+2025-12-20,Software & Subscriptions,OpEx,Intuit QuickBooks,Accounting software,90
+2025-12-24,Equipment Repairs & Maintenance,COGS,Lakehead Equipment,Tires - trailer,2554.78
+2025-12-25,Accounting Fees,OpEx,Clearwater CPA Group,Monthly bookkeeping & payroll review,800
+2025-12-28,Interest Expense,Other,North Shore Bank,Interest - equipment term loan,1636
+2025-12-28,Depreciation,Other,Internal,Monthly depreciation - fleet & equipment,5650
+2025-12-31,Other Income,Other Income,North Shore Bank,Interest earned - operating account,410

@@ -1,0 +1,186 @@
+{
+ "planted": [
+  {
+   "n": 1,
+   "title": "Owner salary above market for a general manager",
+   "category": "Owner compensation",
+   "direction": 1,
+   "amount": 65000,
+   "groups": [
+    "Officer Salaries|Dale Brandt"
+   ],
+   "why": "Owner pays himself $160K; a hired GM for a ~$1.6M landscaping firm runs ~$95K."
+  },
+  {
+   "n": 2,
+   "title": "Owner's spouse on payroll alongside a full-time office manager",
+   "category": "Related party",
+   "direction": 1,
+   "amount": 52000,
+   "groups": [
+    "Office Salaries|Karen Brandt"
+   ],
+   "why": "Salaried, no hours, role duplicates the office manager. Add back if she won't stay."
+  },
+  {
+   "n": 3,
+   "title": "Rent paid to owner's LLC above market",
+   "category": "Related party",
+   "direction": 1,
+   "amount": 36000,
+   "groups": [
+    "Rent|Brandt Properties LLC"
+   ],
+   "why": "$8,500/mo to the owner's own entity vs ~$5,500 market; buyer will sign a new lease at market."
+  },
+  {
+   "n": 4,
+   "title": "One-time lawsuit settlement and litigation fees",
+   "category": "Non-recurring expense",
+   "direction": 1,
+   "amount": 52500,
+   "groups": [
+    "Legal & Professional|Lindqvist & Moe PLLC"
+   ],
+   "why": "Hansen v. Birchline settled in June, full and final."
+  },
+  {
+   "n": 5,
+   "title": "Owner's personal Lexus lease",
+   "category": "Personal expense",
+   "direction": 1,
+   "amount": 14400,
+   "groups": [
+    "Vehicle Expense|Toyota Financial Services"
+   ],
+   "why": "Fleet is F-250s; a Lexus GX is the owner's personal car."
+  },
+  {
+   "n": 6,
+   "title": "Hawaii trip booked as client development",
+   "category": "Personal expense",
+   "direction": 1,
+   "amount": 11800,
+   "groups": [
+    "Travel|Delta Air Lines",
+    "Travel|Wailea Beach Resort"
+   ],
+   "why": "Four tickets to Maui (OGG) in February for a Duluth landscaper."
+  },
+  {
+   "n": 7,
+   "title": "Country club dues",
+   "category": "Personal expense",
+   "direction": 1,
+   "amount": 9600,
+   "groups": [
+    "Dues & Subscriptions|Northland Country Club"
+   ],
+   "why": "Discretionary owner perk."
+  },
+  {
+   "n": 8,
+   "title": "Private-school tuition booked as training",
+   "category": "Personal expense",
+   "direction": 1,
+   "amount": 18000,
+   "groups": [
+    "Training & Education|Marshall School"
+   ],
+   "why": "Spring/fall semester tuition at a private K-12 school."
+  },
+  {
+   "n": 9,
+   "title": "One-time storm cleanup contract",
+   "category": "Non-recurring revenue",
+   "direction": -1,
+   "amount": 44000,
+   "groups": [
+    "Revenue - Design & Installation|City of Duluth",
+    "Subcontractors|Superior Tree & Crane"
+   ],
+   "why": "$85K of derecho cleanup revenue less $41K of subcontractor cost; won't repeat."
+  },
+  {
+   "n": 10,
+   "title": "Workers' comp premiums stop after June",
+   "category": "Missing cost",
+   "direction": -1,
+   "amount": 9300,
+   "groups": [
+    "Insurance|SFM Mutual Insurance"
+   ],
+   "why": "Only 6 of 12 monthly premiums recorded; a full year of coverage costs ~$9.3K more."
+  },
+  {
+   "n": 11,
+   "title": "Employee Retention Credit refund",
+   "category": "Non-recurring income",
+   "direction": -1,
+   "amount": 46000,
+   "groups": [
+    "Other Income|IRS - US Treasury"
+   ],
+   "why": "Refund for 2021 payroll; not part of 2025 earnings."
+  },
+  {
+   "n": 12,
+   "title": "Gain on sale of equipment",
+   "category": "Non-recurring income",
+   "direction": -1,
+   "amount": 18500,
+   "groups": [
+    "Other Income|Lakehead Equipment"
+   ],
+   "why": "One-time gain on trading in a skid steer."
+  },
+  {
+   "n": 13,
+   "title": "Next year's insurance expensed this year",
+   "category": "Out-of-period",
+   "direction": 1,
+   "amount": 24000,
+   "groups": [
+    "Insurance|West Bend Insurance"
+   ],
+   "why": "2026 policy paid and expensed in December 2025; belongs in prepaid."
+  },
+  {
+   "n": 14,
+   "title": "Household purchases on the company card",
+   "category": "Personal expense",
+   "direction": 1,
+   "amount": 7180,
+   "groups": [
+    "Office Supplies|Costco Wholesale"
+   ],
+   "why": "Costco memos read household, home groceries, family gifts."
+  },
+  {
+   "n": 15,
+   "title": "Owner's son paid half the market rate",
+   "category": "Missing cost",
+   "direction": -1,
+   "amount": 15980.0,
+   "groups": [
+    "Field Labor|Jake Brandt"
+   ],
+   "why": "$12/hr vs $23.50-$24/hr for the other crew leads; a replacement costs ~$16K more for the season."
+  }
+ ],
+ "decoys": [
+  "Vehicle Expense|Ford Credit",
+  "Dues & Subscriptions|Duluth Area Chamber of Commerce",
+  "Dues & Subscriptions|MN Nursery & Landscape Association",
+  "Training & Education|Hennepin Technical College",
+  "Training & Education|ICPI",
+  "Legal & Professional|Arrowhead Legal Services",
+  "Travel|Hilton Minneapolis",
+  "Office Supplies|Amazon",
+  "Accounting Fees|Clearwater CPA Group",
+  "Advertising & Marketing|Duluth Home & Garden Show",
+  "Office Salaries|Linda Ortiz",
+  "Field Labor|Tom Lindgren",
+  "Field Labor|Ana Reyes"
+ ]
+}
