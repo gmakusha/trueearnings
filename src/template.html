@@ -270,10 +270,13 @@ const state = { mode:"demo", rows:DEMO_ROWS, context:"", groups:[], gmap:{}, pl:
 /* ---------- accounting ---------- */
 function inferType(acct){
   const a = acct.toLowerCase();
+  const num = /^\s*(\d)\d{2,4}\b/.exec(acct); const lead = num ? num[1] : null;
   if (/depreciation|amortization/.test(a)) return "Other";
   if (/interest expense|interest paid|^interest$/.test(a)) return "Other";
   if (/income tax/.test(a)) return "Other";
   if (/other income|gain|interest income|misc(ellaneous)? income/.test(a)) return "Other Income";
+  if (lead==="4") return "Revenue";
+  if (lead==="5") return "COGS";
   if (/revenue|sales|income|fees earned/.test(a)) return "Revenue";
   if (/cost of|cogs|materials|subcontract|direct labor|field labor|job/.test(a)) return "COGS";
   return "OpEx";
